@@ -1,0 +1,31 @@
+#about {
+  h1 {
+    font-size: 2rem;
+    margin-top: 8rem;
+    text-align: center;
+    span {
+      color: $blue;
+      display: block;
+      &:nth-of-type(3) {
+        color: $pink;
+        font-size: 4rem;
+      }
+    }
+  }
+  ul {
+    color: $blue;
+    margin: 4rem 0 0 8rem;
+    list-style-type: none;
+    font-size: 1.2rem;
+    li {
+      color: $violet;
+      padding-top: .2rem;
+      font-size: 1.1rem;
+    }
+  }
+  p {
+    text-align: center;
+    color: $gray;
+    margin-top: 7rem;
+  }
+}

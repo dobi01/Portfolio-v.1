@@ -1,0 +1,27 @@
+$blue: #1278f5;
+$pink: #ff006b;
+$violet: #7800ff;
+$gray: #7d777a;
+
+* {
+  font-family: 'Offside', monospace;
+  font-weight: 100;
+  color: #000;
+}
+
+html {
+  background-color: #fff;
+  font-size: 100%;
+  overflow-x: hidden;
+}
+
+// @media (max-width: 768px) {
+//   html {
+//     font-size: 60%;
+//   }
+// }
+
+section {
+  width: 100vw;
+  height: 100vh;
+}

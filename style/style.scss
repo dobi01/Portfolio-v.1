@@ -1,61 +1,6 @@
-@import 'reset';
-@import 'grid';
-@import url('https://fonts.googleapis.com/css?family=Offside');
-
-$blue: #1278f5;
-$pink: #ff006b;
-$violet: #7800ff;
-
-* {
-  font-family: 'Offside', monospace;
-  font-weight: 100;
-  color: #000;
-  overflow-x: hidden;
-}
-
-html {
-  background-color: #fff;
-  font-size: 100%;
-}
-
-// @media (max-width: 768px) {
-//   html {
-//     font-size: 60%;
-//   }
-// }
-
-header {
-  width: 100vw;
-  height: 100vh;
-  img {
-    margin-top: 5vh;
-    height: 95vh;
-    min-width: 1px;
-  }
-  h1 {
-    font-size: 4.5rem;
-    margin-top: 7rem;
-    margin-left: 3rem;
-    span {
-      color: $blue;
-      display: block;
-      &:nth-of-type(1) {
-        margin-bottom: 5rem;
-      }
-      &:nth-of-type(2) {
-        font-size: 3.5rem;
-      }
-      &:nth-of-type(3) {
-        margin-left: 6rem;
-      }
-      &:nth-of-type(4) {
-        font-size: 5.5rem;
-        color: $pink;
-        margin-left: 2.5rem;
-      }
-      &:nth-of-type(5) {
-        margin-left: 17rem;
-      }
-    }
-  }
-}
+@import url('https://fonts.googleapis.com/css?family=Offside'),
+        'reset',
+        'grid',
+        'common', 
+        'header',
+        'section_1_About';

@@ -154,12 +154,16 @@ section {
 * {
   font-family: 'Offside', monospace;
   font-weight: 100;
-  color: #000;
-  overflow-x: hidden; }
+  color: #000; }
 
 html {
   background-color: #fff;
-  font-size: 100%; }
+  font-size: 100%;
+  overflow-x: hidden; }
+
+section {
+  width: 100vw;
+  height: 100vh; }
 
 header {
   width: 100vw;
@@ -171,7 +175,7 @@ header {
   header h1 {
     font-size: 4.5rem;
     margin-top: 7rem;
-    margin-left: 3rem; }
+    margin-left: 4rem; }
     header h1 span {
       color: #1278f5;
       display: block; }
@@ -187,5 +191,29 @@ header {
         margin-left: 2.5rem; }
       header h1 span:nth-of-type(5) {
         margin-left: 17rem; }
+
+#about h1 {
+  font-size: 2rem;
+  margin-top: 8rem;
+  text-align: center; }
+  #about h1 span {
+    color: #1278f5;
+    display: block; }
+    #about h1 span:nth-of-type(3) {
+      color: #ff006b;
+      font-size: 4rem; }
+#about ul {
+  color: #1278f5;
+  margin: 4rem 0 0 8rem;
+  list-style-type: none;
+  font-size: 1.2rem; }
+  #about ul li {
+    color: #7800ff;
+    padding-top: .2rem;
+    font-size: 1.1rem; }
+#about p {
+  text-align: center;
+  color: #7d777a;
+  margin-top: 7rem; }
 
 /*# sourceMappingURL=style.css.map */
