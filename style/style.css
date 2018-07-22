@@ -158,15 +158,12 @@ section {
 
 html {
   background-color: #fff;
-  font-size: 100%;
-  overflow-x: hidden; }
+  font-size: 100%; }
 
 section {
-  width: 100vw;
   height: 100vh; }
 
 header {
-  width: 100vw;
   height: 100vh; }
   header img {
     margin-top: 5vh;
@@ -175,7 +172,7 @@ header {
   header h1 {
     font-size: 4.5rem;
     margin-top: 7rem;
-    margin-left: 4rem; }
+    padding-left: 4rem; }
     header h1 span {
       color: #1278f5;
       display: block; }
@@ -183,15 +180,15 @@ header {
         margin-bottom: 5rem; }
       header h1 span:nth-of-type(2) {
         font-size: 3.5rem;
-        margin-left: .3rem; }
+        padding-left: .3rem; }
       header h1 span:nth-of-type(3) {
-        margin-left: 6rem; }
+        padding-left: 6rem; }
       header h1 span:nth-of-type(4) {
         font-size: 5.5rem;
         color: #ff006b;
-        margin-left: 2.5rem; }
+        padding-left: 2.5rem; }
       header h1 span:nth-of-type(5) {
-        margin-left: 17rem; }
+        padding-left: 17rem; }
 
 #about h1 {
   font-size: 2rem;
@@ -206,7 +203,7 @@ header {
       padding-top: 1rem; }
 #about ul {
   color: #1278f5;
-  margin: 3rem 0 0 8rem;
+  padding: 3rem 0 0 8rem;
   list-style-type: none;
   font-size: 1.2rem; }
   #about ul li {
@@ -229,7 +226,7 @@ header {
 
 #code-piece-3 p {
   font-size: 4rem;
-  margin: 35vh 10vw; }
+  padding: 35vh 10vw; }
   #code-piece-3 p span {
     display: block;
     padding-left: 7rem;
