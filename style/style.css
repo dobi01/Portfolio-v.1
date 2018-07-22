@@ -242,6 +242,11 @@ header {
     margin: 0 auto;
     width: 60%; }
 
+#code-piece-5 {
+  padding-top: 30vh;
+  margin-left: 17%;
+  font-size: 6rem; }
+
 .color-pink {
   color: #ff006b; }
 
@@ -265,6 +270,9 @@ header {
 
 .pad-3 {
   padding-left: 13.3rem; }
+
+.pad-4 {
+  padding-left: 6rem; }
 
 .gradient-box {
   background: #ff007e;
@@ -329,7 +337,6 @@ header {
   margin: 17rem 0 0 5rem !important; }
 
 .figure--last {
-  margin: 8rem auto !important;
-  transform: rotate(-20deg); }
+  margin: 9rem auto !important; }
 
 /*# sourceMappingURL=style.css.map */
