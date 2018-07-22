@@ -219,7 +219,7 @@ header {
   margin-top: 7rem;
   display: block; }
 
-#code-piece-1 p {
+#code-piece-1, #code-piece-2 {
   font-size: 10rem;
   text-align: center;
   line-height: 100vh; }
@@ -265,5 +265,8 @@ header {
 
 .figure--right {
   margin: 17rem 0 0 5rem !important; }
+
+#code-piece-2 {
+  font-size: 6rem; }
 
 /*# sourceMappingURL=style.css.map */

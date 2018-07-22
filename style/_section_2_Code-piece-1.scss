@@ -1,7 +1,9 @@
+%code {
+  font-size: 10rem;
+  text-align: center;
+  line-height: 100vh;
+}
+
 #code-piece-1 {
-  p {
-    font-size: 10rem;
-    text-align: center;
-    line-height: 100vh;
-  }
+  @extend %code;
 }
