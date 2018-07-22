@@ -224,6 +224,17 @@ header {
   text-align: center;
   line-height: 100vh; }
 
+#code-piece-2 {
+  font-size: 6rem; }
+
+#code-piece-3 p {
+  font-size: 4rem;
+  margin: 35vh 10vw; }
+  #code-piece-3 p span {
+    display: block;
+    padding-left: 7rem;
+    padding-top: .7rem; }
+
 .portfolio {
   position: relative; }
   .portfolio span {
@@ -265,8 +276,5 @@ header {
 
 .figure--right {
   margin: 17rem 0 0 5rem !important; }
-
-#code-piece-2 {
-  font-size: 6rem; }
 
 /*# sourceMappingURL=style.css.map */
