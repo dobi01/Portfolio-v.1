@@ -182,7 +182,8 @@ header {
       header h1 span:nth-of-type(1) {
         margin-bottom: 5rem; }
       header h1 span:nth-of-type(2) {
-        font-size: 3.5rem; }
+        font-size: 3.5rem;
+        margin-left: .3rem; }
       header h1 span:nth-of-type(3) {
         margin-left: 6rem; }
       header h1 span:nth-of-type(4) {
@@ -201,19 +202,26 @@ header {
     display: block; }
     #about h1 span:nth-of-type(3) {
       color: #ff006b;
-      font-size: 4rem; }
+      font-size: 4rem;
+      padding-top: 1rem; }
 #about ul {
   color: #1278f5;
-  margin: 4rem 0 0 8rem;
+  margin: 3rem 0 0 8rem;
   list-style-type: none;
   font-size: 1.2rem; }
   #about ul li {
     color: #7800ff;
     padding-top: .2rem;
     font-size: 1.1rem; }
-#about p {
+#about a {
   text-align: center;
   color: #7d777a;
-  margin-top: 7rem; }
+  margin-top: 7rem;
+  display: block; }
+
+#code-piece-1 p {
+  font-size: 10rem;
+  text-align: center;
+  line-height: 100vh; }
 
 /*# sourceMappingURL=style.css.map */

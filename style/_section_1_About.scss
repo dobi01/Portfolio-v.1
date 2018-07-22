@@ -9,12 +9,13 @@
       &:nth-of-type(3) {
         color: $pink;
         font-size: 4rem;
+        padding-top: 1rem;
       }
     }
   }
   ul {
     color: $blue;
-    margin: 4rem 0 0 8rem;
+    margin: 3rem 0 0 8rem;
     list-style-type: none;
     font-size: 1.2rem;
     li {
@@ -23,9 +24,10 @@
       font-size: 1.1rem;
     }
   }
-  p {
+  a {
     text-align: center;
     color: $gray;
     margin-top: 7rem;
+    display: block;
   }
 }
