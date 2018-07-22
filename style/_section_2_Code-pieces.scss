@@ -42,46 +42,60 @@
   font-size: 6rem;
 }
 
-.color-pink {
-  color: $pink;
+#code-piece-6 {
+  font-size: 6.5rem;
+  position: relative;
+  background: #FF006B;
+  background: linear-gradient(90deg, #FF006B 0%,#1278f5 100%);
+  div {
+    position: absolute;
+    bottom: 5%;
+    padding-top: 30vh;
+    width: 100%;
+    p {
+      margin-left: 5%;
+      color: #fff;
+    }
+  }
+  img {
+    margin-top: 5vh;
+    height: 95vh;
+    min-width: 1px;
+    position: absolute;
+    bottom: 0;
+    margin-left: 0;
+    padding: 0;
+    transform: scaleX(-1);
+  }
+  #img-1 { left: -5%; }
+  #img-2 { left: 20%; }
+  #img-3 { left: 40%; }
+  #img-4 { left: 60%; }
+  #img-1, #img-2, #img-3, #img-4 { 
+    transform: scaleY(-1);
+    top: 0;
+    margin-bottom: 5vh;
+    margin-top: 0;
+  }
+  #img-5 { left: 0; }
+  #img-6 { left: 25%; }
+  #img-7 { left: 50%; }
+  #img-8 { left: 75%; }
 }
 
-.color-blue {
-  color: $blue;
-}
+.color-pink { color: $pink; }
+.color-blue { color: $blue; }
+.color-violet { color: $violet; }
+.color-black { color: #000; }
+.color-gray { color: $gray; }
 
-.color-violet {
-  color: $violet;
-}
-
-.color-black {
-  color: #000;
-}
-
-.color-gray {
-  color: $gray;
-}
-
-.pad-1 {
-  padding-left: 2rem;
-}
-
-.pad-2 {
-  padding-left: 4rem;
-}
-
-.pad-3 {
-  padding-left: 13.3rem;
-}
-
-.pad-4 {
-  padding-left: 6rem;
-}
+.pad-1 { padding-left: 2rem; }
+.pad-2 { padding-left: 4rem; }
+.pad-3 { padding-left: 13.3rem; }
+.pad-4 { padding-left: 6rem; }
 
 .gradient-box {
   background: #ff007e;
-  background: -moz-linear-gradient(45deg, #ff007e 0%, #1278f5 100%);
-  background: -webkit-linear-gradient(45deg, #ff007e 0%,#1278f5 100%);
   background: linear-gradient(45deg, #ff007e 0%,#1278f5 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff007e', endColorstr='#1278f5',GradientType=1 );
   height: 50rem;
