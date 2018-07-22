@@ -1,0 +1,54 @@
+.portfolio {
+  position: relative;
+  span {
+    font-size: 25rem;
+    color: $violet;
+    position: absolute;
+    &:first-of-type {
+      right: 0;
+      top: -8rem;
+    }
+    &:last-of-type {
+      left: 0;
+      bottom: -8rem;
+    }
+  }
+  .portfolio--color-gray {
+    color: $gray;
+  }
+  figure {
+    margin: 8rem 0 0 17rem; 
+    width: 25rem;
+    h1 {
+      color: $violet;
+      font-size: 1rem;
+    }
+    h2 {
+      color: $pink;
+      font-size: 1.5rem;
+      padding-bottom: .7rem;
+    }
+    .layer {
+      background-color: $pink;
+      margin-bottom: .5rem;
+      position: relative;
+      &:hover img {
+        opacity: 1;
+      }
+      img {
+        width: 25rem;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        cursor: pointer;
+      }
+    }
+    a {
+      color: $blue;
+      font-size: 1rem;
+    }
+  }
+}
+
+.figure--right {
+  margin: 17rem 0 0 5rem !important;
+}

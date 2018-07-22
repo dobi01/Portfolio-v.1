@@ -224,4 +224,46 @@ header {
   text-align: center;
   line-height: 100vh; }
 
+.portfolio {
+  position: relative; }
+  .portfolio span {
+    font-size: 25rem;
+    color: #7800ff;
+    position: absolute; }
+    .portfolio span:first-of-type {
+      right: 0;
+      top: -8rem; }
+    .portfolio span:last-of-type {
+      left: 0;
+      bottom: -8rem; }
+  .portfolio .portfolio--color-gray {
+    color: #7d777a; }
+  .portfolio figure {
+    margin: 8rem 0 0 17rem;
+    width: 25rem; }
+    .portfolio figure h1 {
+      color: #7800ff;
+      font-size: 1rem; }
+    .portfolio figure h2 {
+      color: #ff006b;
+      font-size: 1.5rem;
+      padding-bottom: .7rem; }
+    .portfolio figure .layer {
+      background-color: #ff006b;
+      margin-bottom: .5rem;
+      position: relative; }
+      .portfolio figure .layer:hover img {
+        opacity: 1; }
+      .portfolio figure .layer img {
+        width: 25rem;
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        cursor: pointer; }
+    .portfolio figure a {
+      color: #1278f5;
+      font-size: 1rem; }
+
+.figure--right {
+  margin: 17rem 0 0 5rem !important; }
+
 /*# sourceMappingURL=style.css.map */
