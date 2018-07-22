@@ -158,7 +158,8 @@ section {
 
 html {
   background-color: #fff;
-  font-size: 100%; }
+  font-size: 100%;
+  overflow-x: hidden; }
 
 section {
   height: 100vh; }
@@ -232,6 +233,59 @@ header {
     padding-left: 7rem;
     padding-top: .7rem; }
 
+#code-piece-4 {
+  font-size: 1.5rem;
+  padding-top: 4rem;
+  line-height: 2rem;
+  position: relative; }
+  #code-piece-4 .center {
+    margin: 0 auto;
+    width: 60%; }
+
+.color-pink {
+  color: #ff006b; }
+
+.color-blue {
+  color: #1278f5; }
+
+.color-violet {
+  color: #7800ff; }
+
+.color-black {
+  color: #000; }
+
+.color-gray {
+  color: #7d777a; }
+
+.pad-1 {
+  padding-left: 2rem; }
+
+.pad-2 {
+  padding-left: 4rem; }
+
+.pad-3 {
+  padding-left: 13.3rem; }
+
+.gradient-box {
+  background: #ff007e;
+  background: -moz-linear-gradient(45deg, #ff007e 0%, #1278f5 100%);
+  background: -webkit-linear-gradient(45deg, #ff007e 0%, #1278f5 100%);
+  background: linear-gradient(45deg, #ff007e 0%, #1278f5 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff007e', endColorstr='#1278f5',GradientType=1 );
+  height: 50rem;
+  width: 50rem;
+  transform: rotate(-20deg); }
+
+.gradient-box-1 {
+  position: absolute;
+  left: -47rem;
+  bottom: -6rem; }
+
+.gradient-box-2 {
+  position: absolute;
+  right: -45rem;
+  top: -5rem; }
+
 .portfolio {
   position: relative; }
   .portfolio span {
@@ -273,5 +327,9 @@ header {
 
 .figure--right {
   margin: 17rem 0 0 5rem !important; }
+
+.figure--last {
+  margin: 8rem auto !important;
+  transform: rotate(-20deg); }
 
 /*# sourceMappingURL=style.css.map */
