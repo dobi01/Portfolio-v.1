@@ -22,7 +22,7 @@ html {
 // }
 
 section {
-  height: 100vh;
+  height: 100vh;;
 }
 
 .center {
@@ -30,4 +30,8 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.overflow-hidden {
+  overflow: hidden;
 }

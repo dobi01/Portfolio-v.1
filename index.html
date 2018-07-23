@@ -9,7 +9,18 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
-  <header>
+  <nav>
+    <div class="center">
+      <div class="circle"></div>
+    </div>
+    <div class="row">
+      <div class="col-4"><a href="#about">About</a></div>
+      <div class="col-4"><a href="#contact">Contact</a></div>
+      <div class="col-4"><a href="#portfolio-0">Portfolio</a></div>
+    </div>
+  </nav>
+  <header id="header">
+    <button><i class="far fa-circle"></i></button>
     <div class="row">
       <div class="col-5">
         <img src="img/portret.png" alt="portrait picture of webpage author">
@@ -25,8 +36,6 @@
       </div>
     </div>
   </header>
-  <nav>
-  </nav>
   <section id="about">
     <div class="row">
       <div class="col-12">
@@ -66,7 +75,7 @@
         </ul>
       </div>
     </div>
-    <a href="#portfolio">Ok, enough talking, show me your work</a>
+    <a href="#portfolio-0">Ok, enough talking, show me your work</a>
   </section>
   <section id="code-piece-1">
     <p>dream() ?</p>
@@ -241,7 +250,7 @@
       <p>need-for-development"&#62;</p>
     </div>
   </section>
-  <address>
+  <address id="contact">
     <div class="center">
       <h1>Contact me</h1>
       <p>
@@ -282,11 +291,11 @@
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
-  <script type="text/javascript" src="jquery-ui.js"></script>
+  <script type="text/javascript" src="scripts/jquery-ui.js"></script>
   <!-- <script
   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="
   crossorigin="anonymous"></script> -->
-  <script type="text/javascript" src="script.js"></script>
+  <script type="text/javascript" src="scripts/script.js"></script>
 </body>
 </html>

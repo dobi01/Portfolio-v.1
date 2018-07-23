@@ -1,5 +1,22 @@
 header {
   height: 100vh;
+  z-index: 1;
+  button {
+    background: none;
+    border: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 60px;
+    outline: none;
+    cursor: pointer;
+    z-index: 10;
+    i {
+      padding: 10px;
+      font-size: 40px;
+      color: $pink;
+    }
+  }
   img {
     margin-top: 5vh;
     height: 95vh;
