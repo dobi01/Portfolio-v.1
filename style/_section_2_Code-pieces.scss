@@ -14,9 +14,9 @@
 }
 
 #code-piece-3 {
+  position: relative;
   p { 
     font-size: 4rem;
-    padding: 35vh 10vw;
     span {
       display: block;
       padding-left: 7rem;
@@ -30,16 +30,11 @@
   padding-top: 4rem;
   line-height: 2rem;
   position: relative;
-  .center {
-    margin: 0 auto;
-    width: 60%;
-  }
 }
 
 #code-piece-5 {
-  padding-top: 30vh;
-  margin-left: 17%;
   font-size: 6rem;
+  position: relative;
 }
 
 #code-piece-6 {

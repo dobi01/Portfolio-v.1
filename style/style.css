@@ -164,32 +164,39 @@ html {
 section {
   height: 100vh; }
 
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
 header {
   height: 100vh; }
   header img {
     margin-top: 5vh;
     height: 95vh;
     min-width: 1px; }
-  header h1 {
-    font-size: 4.5rem;
-    margin-top: 7rem;
-    padding-left: 4rem; }
-    header h1 span {
-      color: #1278f5;
-      display: block; }
-      header h1 span:nth-of-type(1) {
-        margin-bottom: 5rem; }
-      header h1 span:nth-of-type(2) {
-        font-size: 3.5rem;
-        padding-left: .3rem; }
-      header h1 span:nth-of-type(3) {
-        padding-left: 6rem; }
-      header h1 span:nth-of-type(4) {
-        font-size: 5.5rem;
-        color: #ff006b;
-        padding-left: 2.5rem; }
-      header h1 span:nth-of-type(5) {
-        padding-left: 17rem; }
+  header .col-7 {
+    position: relative;
+    height: 100vh; }
+    header .col-7 h1 {
+      font-size: 4.5rem; }
+      header .col-7 h1 span {
+        color: #1278f5;
+        display: block; }
+        header .col-7 h1 span:nth-of-type(1) {
+          margin-bottom: 5rem; }
+        header .col-7 h1 span:nth-of-type(2) {
+          font-size: 3.5rem;
+          padding-left: .3rem; }
+        header .col-7 h1 span:nth-of-type(3) {
+          padding-left: 6rem; }
+        header .col-7 h1 span:nth-of-type(4) {
+          font-size: 5.5rem;
+          color: #ff006b;
+          padding-left: 2.5rem; }
+        header .col-7 h1 span:nth-of-type(5) {
+          padding-left: 14rem; }
 
 #about h1 {
   font-size: 2rem;
@@ -225,27 +232,24 @@ header {
 #code-piece-2 {
   font-size: 6rem; }
 
-#code-piece-3 p {
-  font-size: 4rem;
-  padding: 35vh 10vw; }
-  #code-piece-3 p span {
-    display: block;
-    padding-left: 7rem;
-    padding-top: .7rem; }
+#code-piece-3 {
+  position: relative; }
+  #code-piece-3 p {
+    font-size: 4rem; }
+    #code-piece-3 p span {
+      display: block;
+      padding-left: 7rem;
+      padding-top: .7rem; }
 
 #code-piece-4 {
   font-size: 1.5rem;
   padding-top: 4rem;
   line-height: 2rem;
   position: relative; }
-  #code-piece-4 .center {
-    margin: 0 auto;
-    width: 60%; }
 
 #code-piece-5 {
-  padding-top: 30vh;
-  margin-left: 17%;
-  font-size: 6rem; }
+  font-size: 6rem;
+  position: relative; }
 
 #code-piece-6 {
   font-size: 6.5rem;
@@ -386,26 +390,21 @@ address {
   font-style: normal;
   text-align: center;
   position: relative; }
-  address div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    address div h1 {
-      font-size: 3rem;
-      padding-bottom: 1rem; }
-    address div p {
-      font-size: 2rem;
-      padding-bottom: .5rem; }
-    address div a {
-      font-size: 2rem;
-      padding-bottom: .5rem; }
-      address div a i {
-        margin-top: 1rem;
-        padding: 0 .3rem;
-        font-size: 2.3rem;
-        transition: color .3s ease-in-out; }
-        address div a i:hover {
-          color: #1278f5; }
+  address h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem; }
+  address p {
+    font-size: 2rem;
+    padding-bottom: .5rem; }
+  address a {
+    font-size: 2rem;
+    padding-bottom: .5rem; }
+    address a i {
+      margin-top: 1rem;
+      padding: 0 .3rem;
+      font-size: 2.3rem;
+      transition: color .3s ease-in-out; }
+      address a i:hover {
+        color: #1278f5; }
 
 /*# sourceMappingURL=style.css.map */

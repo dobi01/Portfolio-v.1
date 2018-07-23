@@ -5,30 +5,32 @@ header {
     height: 95vh;
     min-width: 1px;
   }
-  h1 {
-    font-size: 4.5rem;
-    margin-top: 7rem;
-    padding-left: 4rem;
-    span {
-      color: $blue;
-      display: block;
-      &:nth-of-type(1) {
-        margin-bottom: 5rem;
-      }
-      &:nth-of-type(2) {
-        font-size: 3.5rem;
-        padding-left: .3rem;
-      }
-      &:nth-of-type(3) {
-        padding-left: 6rem;
-      }
-      &:nth-of-type(4) {
-        font-size: 5.5rem;
-        color: $pink;
-        padding-left: 2.5rem;
-      }
-      &:nth-of-type(5) {
-        padding-left: 17rem;
+  .col-7 {
+    position: relative;
+    height: 100vh;
+    h1 {
+      font-size: 4.5rem;
+      span {
+        color: $blue;
+        display: block;
+        &:nth-of-type(1) {
+          margin-bottom: 5rem;
+        }
+        &:nth-of-type(2) {
+          font-size: 3.5rem;
+          padding-left: .3rem;
+        }
+        &:nth-of-type(3) {
+          padding-left: 6rem;
+        }
+        &:nth-of-type(4) {
+          font-size: 5.5rem;
+          color: $pink;
+          padding-left: 2.5rem;
+        }
+        &:nth-of-type(5) {
+          padding-left: 14rem;
+        }
       }
     }
   }

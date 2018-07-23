@@ -3,30 +3,24 @@ address {
   font-style: normal;
   text-align: center;
   position: relative;
-  div {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    h1 {
-      font-size: 3rem;
-      padding-bottom: 1rem;
-    }
-    p {
-      font-size: 2rem;
-      padding-bottom: .5rem;
-    }
-    a {
-      font-size: 2rem;
-      padding-bottom: .5rem;
-      i {
-        margin-top: 1rem;
-        padding: 0 .3rem;
-        font-size: 2.3rem;
-        transition: color .3s ease-in-out;
-        &:hover {
-          color: $blue;
-        }
+  h1 {
+    font-size: 3rem;
+    padding-bottom: 1rem;
+  }
+  p {
+    font-size: 2rem;
+    padding-bottom: .5rem;
+  }
+  a {
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    i {
+      margin-top: 1rem;
+      padding: 0 .3rem;
+      font-size: 2.3rem;
+      transition: color .3s ease-in-out;
+      &:hover {
+        color: $blue;
       }
     }
   }
