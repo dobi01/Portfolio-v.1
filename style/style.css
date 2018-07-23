@@ -381,4 +381,31 @@ header {
 .figure--last {
   margin: 9rem auto !important; }
 
+address {
+  height: 100vh;
+  font-style: normal;
+  text-align: center;
+  position: relative; }
+  address div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    address div h1 {
+      font-size: 3rem;
+      padding-bottom: 1rem; }
+    address div p {
+      font-size: 2rem;
+      padding-bottom: .5rem; }
+    address div a {
+      font-size: 2rem;
+      padding-bottom: .5rem; }
+      address div a i {
+        margin-top: 1rem;
+        padding: 0 .3rem;
+        font-size: 2.3rem;
+        transition: color .3s ease-in-out; }
+        address div a i:hover {
+          color: #1278f5; }
+
 /*# sourceMappingURL=style.css.map */
