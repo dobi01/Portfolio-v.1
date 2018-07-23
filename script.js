@@ -2,12 +2,12 @@ $(function() {
 
   const portfolio = $('.portfolio'),
         portfolioElem = portfolio.find('span, h1, h2, a'),
-        portfoliolayer = $('.layer');
+        portfolioLayer = portfolio.find('.layer');
 
   function turnGray() {
-    portfolioElem.toggleClass('portfolio--color-gray', 1000);
+    portfolioElem.stop(true, true).toggleClass('portfolio--color-gray', 500);
   };
 
-  portfoliolayer.hover(turnGray, turnGray);
+  portfolioLayer.hover(turnGray, turnGray);
 
 });
