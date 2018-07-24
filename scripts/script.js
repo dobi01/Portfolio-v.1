@@ -9,14 +9,14 @@
           linkToPortfolio = $('#about a');
 
     function showMenu() {
-      docToHideAndShow.fadeToggle(1000, 'linear');
+      docToHideAndShow.fadeToggle(700, 'linear');
     }
 
     linkToPortfolio.click(function() {
       c = $(this).data("page-number");
       doc.animate({
         scrollTop: $('#portfolio-0').offset().top
-        }, 800, 'linear');
+        }, 700, 'linear');
     });
 
     menuButton.click(function() {
