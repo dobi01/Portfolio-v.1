@@ -156,6 +156,9 @@ section {
   font-weight: 100;
   color: #000; }
 
+::-webkit-scrollbar {
+  display: none; }
+
 html {
   background-color: #fff;
   font-size: 100%;
@@ -169,9 +172,6 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
-
-.overflow-hidden {
-  overflow: hidden; }
 
 nav {
   height: 100vh;

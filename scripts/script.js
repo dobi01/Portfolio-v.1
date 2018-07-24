@@ -10,10 +10,10 @@
 
     function showMenu() {
       docToHideAndShow.fadeToggle(1000, 'linear');
-      doc.toggleClass('overflow-hidden');
     }
 
     linkToPortfolio.click(function() {
+      c = $(this).data("page-number");
       doc.animate({
         scrollTop: $('#portfolio-0').offset().top
         }, 800, 'linear');
@@ -26,6 +26,7 @@
 
     navLinks.click(function() {
       showMenu();
+      c = $(this).data("page-number");
     });
 
     // Portfolio section animate

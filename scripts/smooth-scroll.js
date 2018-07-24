@@ -83,15 +83,8 @@
   
   })(jQuery);
   
-  
-  
-  
-  
+    
   // OUR CODE
-  
-  
-  
-  
   
   var winH = $(window).height();
   $('.page').height(winH);
@@ -99,31 +92,22 @@
   var c = 0;
   var pagesN = $('.page').length;
   
-  // CREATE NAVIGATION BUTTONS depending on pages number
-  for(i=0;i<pagesN;i++){
-     $('#nav_2').append('<div class="btn">'+(i+1)+'</div>');
-  }
-  $('#nav_2 .btn').eq(c).addClass('active');
-  
-  
   function adjustCurrent(){
       if(c===-1){
           c=0;
       }else if(c===pagesN){
           c=pagesN-1;
-      }
-      $('#nav_2 .btn').eq(c).addClass('active').siblings('.btn').removeClass('active');    
+      }    
   }
   
-  
-  
   var pauseWheel = false; // ADDED THIS 'FLAG' TO PREVENT SCROLLS WHILE ANIMATING
+  
   function scrollPage(){
       adjustCurrent(); 
-      var pagePos = $('.page').eq(c).position().top;       
+      var pagePos = $('.page').eq(c).position().top;    
       $('html, body').stop().animate({scrollTop: pagePos},{
-          easing: 'easeInCirc',
-          duration: 1200,
+          easing: 'easeOutSine',
+          duration: 800,
           complete: function(){
               pauseWheel=false; // WHEN ANIMATION IS OVER RESET TO false
           }
@@ -131,7 +115,7 @@
   }
   var activePage=0;
   $(document).bind('mousewheel', function(ev, delta) {
-      if(pauseWheel===false){ // ONLY IF FLAG IS FALSE
+      if (pauseWheel===false){ // ONLY IF FLAG IS FALSE
           pauseWheel=true;    // SET MOMENTALLY TO TRUE
           delta>0 ? c-- : c++ ;
           activePage=c;
@@ -140,16 +124,20 @@
       }        
   });
   
+  // Modified by Dobi Okrasa
   $(document).bind('keyup', function(event){
-      if(event.which == 40) {
-          activePage = activePage+1;
-          var pagePos = $('.page').eq(activePage).position().top;       
-          $('html, body').stop().animate({scrollTop: pagePos},{easing: 'easeInCirc', duration: 1200});
-      } else if(event.which == 38) {
-          activePage = activePage-1;
-          var pagePos = $('.page').eq(activePage).position().top;       
-          $('html, body').stop().animate({scrollTop: pagePos},{easing: 'easeInCirc', duration: 1200});
+      const key = event.which;
+
+      switch (key) {
+          case 40:
+              c++;
+              scrollPage();
+              break;
+          case 38:
+              c--;
+              scrollPage();
+              break;
       }
-  
+
       return false;
   });
