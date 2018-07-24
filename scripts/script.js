@@ -3,11 +3,15 @@
 
     // Navigation
     const menuButton = $('button'),
-          docToHide = $('button, header, section, address'),
-          nav = $('nav'),
-          navLinks = nav.find('a'),
+          docToHideAndShow = $('nav, button, header, section, address'),
+          navLinks = $('nav a'),
           doc = $('html, body'),
           linkToPortfolio = $('#about a');
+
+    function showMenu() {
+      docToHideAndShow.fadeToggle(1000, 'linear');
+      doc.toggleClass('overflow-hidden');
+    }
 
     linkToPortfolio.click(function() {
       doc.animate({
@@ -16,16 +20,12 @@
     });
 
     menuButton.click(function() {
-      docToHide.fadeToggle(1000, 'linear');
-      doc.scrollTop('#header')
-          .toggleClass('overflow-hidden');
-      nav.fadeToggle(1000, 'linear');
+      showMenu();
+      doc.scrollTop('#header');
     });
 
     navLinks.click(function() {
-      docToHide.fadeToggle(1000, 'linear');
-      doc.toggleClass('overflow-hidden');
-      nav.fadeToggle(1000, 'linear');
+      showMenu();
     });
 
     // Portfolio section animate
@@ -34,7 +34,8 @@
           portfolioLayer = portfolio.find('.layer');
 
     function turnGray() {
-    portfolioElem.stop(true, true).toggleClass('portfolio--color-gray', 500);
+      portfolioElem.stop(true, true)
+                   .toggleClass('portfolio--color-gray', 500);
     };
 
     portfolioLayer.hover(turnGray, turnGray);
