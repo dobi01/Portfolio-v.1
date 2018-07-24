@@ -1,6 +1,7 @@
 header {
   height: 100vh;
   z-index: 1;
+  position: relative;
   button {
     background: none;
     border: none;
@@ -21,6 +22,14 @@ header {
     margin-top: 5vh;
     height: 95vh;
     min-width: 1px;
+    &:nth-of-type(1) {
+      animation: img-multiplying-9 5s linear infinite;
+    }
+    &:nth-of-type(2) {
+      left: .3rem;
+      position: absolute;
+      animation: img-multiplying-0 5s linear infinite;
+    }
   }
   .col-7 {
     position: relative;
@@ -51,4 +60,16 @@ header {
       }
     }
   }
+}
+
+@keyframes img-multiplying-0 {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes img-multiplying-9 {
+  0% { opacity: 1; }
+  50% { opacity: .9; }
+  100% { opacity: 1; }
 }

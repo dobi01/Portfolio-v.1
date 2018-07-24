@@ -226,7 +226,8 @@ nav {
     transform: rotateZ(-360deg) scaleX(0.9) scaleY(0.9); } }
 header {
   height: 100vh;
-  z-index: 1; }
+  z-index: 1;
+  position: relative; }
   header button {
     background: none;
     border: none;
@@ -245,6 +246,12 @@ header {
     margin-top: 5vh;
     height: 95vh;
     min-width: 1px; }
+    header img:nth-of-type(1) {
+      animation: img-multiplying-9 5s linear infinite; }
+    header img:nth-of-type(2) {
+      left: .3rem;
+      position: absolute;
+      animation: img-multiplying-0 5s linear infinite; }
   header .col-7 {
     position: relative;
     height: 100vh; }
@@ -267,6 +274,20 @@ header {
         header .col-7 h1 span:nth-of-type(5) {
           padding-left: 14rem; }
 
+@keyframes img-multiplying-0 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+@keyframes img-multiplying-9 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: .9; }
+  100% {
+    opacity: 1; } }
 #about h1 {
   font-size: 2rem;
   margin-top: 8rem;
@@ -369,15 +390,8 @@ header {
     animation: img-multiplying-8 7s linear infinite; }
   #code-piece-5 #img-9 {
     left: 75%;
-    animation: img-multiplying-9 5s linear infinite; }
+    animation: img-multiplying-7 5s linear infinite; }
 
-@keyframes img-multiplying-0 {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 @keyframes img-multiplying-6 {
   0% {
     opacity: 1; }
@@ -398,15 +412,7 @@ header {
   50% {
     opacity: .5; }
   100% {
-    left: 50%;
     opacity: 1; } }
-@keyframes img-multiplying-9 {
-  0% {
-    opacity: .2; }
-  50% {
-    opacity: 1; }
-  100% {
-    opacity: .2; } }
 .color-pink {
   color: #ff006b; }
 
