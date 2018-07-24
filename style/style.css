@@ -293,47 +293,47 @@ header {
   margin-top: 7rem;
   display: block; }
 
-#code-piece-1, #code-piece-2 {
+#code-piece-0, #code-piece-1 {
   font-size: 10rem;
   text-align: center;
   line-height: 100vh; }
 
-#code-piece-2 {
+#code-piece-1 {
   font-size: 6rem; }
 
-#code-piece-3 {
+#code-piece-2 {
   position: relative; }
-  #code-piece-3 p {
+  #code-piece-2 p {
     font-size: 4rem; }
-    #code-piece-3 p span {
+    #code-piece-2 p span {
       display: block;
       padding-left: 7rem;
       padding-top: .7rem; }
 
-#code-piece-4 {
+#code-piece-3 {
   font-size: 1.5rem;
   padding-top: 4rem;
   line-height: 2rem;
   position: relative; }
 
-#code-piece-5 {
+#code-piece-4 {
   font-size: 6rem;
   position: relative; }
 
-#code-piece-6 {
+#code-piece-5 {
   font-size: 6.5rem;
   position: relative;
   background: #FF006B;
   background: linear-gradient(90deg, #FF006B 0%, #1278f5 100%); }
-  #code-piece-6 div {
+  #code-piece-5 div {
     position: absolute;
     bottom: 5%;
     padding-top: 30vh;
     width: 100%; }
-    #code-piece-6 div p {
+    #code-piece-5 div p {
       margin-left: 5%;
       color: #fff; }
-  #code-piece-6 img {
+  #code-piece-5 img {
     margin-top: 5vh;
     height: 95vh;
     min-width: 1px;
@@ -342,26 +342,26 @@ header {
     margin-left: 0;
     padding: 0;
     transform: scaleX(-1); }
-  #code-piece-6 #img-1 {
+  #code-piece-5 #img-1 {
     left: -5%; }
-  #code-piece-6 #img-2 {
+  #code-piece-5 #img-2 {
     left: 20%; }
-  #code-piece-6 #img-3 {
+  #code-piece-5 #img-3 {
     left: 40%; }
-  #code-piece-6 #img-4 {
+  #code-piece-5 #img-4 {
     left: 60%; }
-  #code-piece-6 #img-1, #code-piece-6 #img-2, #code-piece-6 #img-3, #code-piece-6 #img-4 {
+  #code-piece-5 #img-1, #code-piece-5 #img-2, #code-piece-5 #img-3, #code-piece-5 #img-4 {
     transform: scaleY(-1);
     top: 0;
     margin-bottom: 5vh;
     margin-top: 0; }
-  #code-piece-6 #img-5 {
+  #code-piece-5 #img-5 {
     left: 0; }
-  #code-piece-6 #img-6 {
+  #code-piece-5 #img-6 {
     left: 25%; }
-  #code-piece-6 #img-7 {
+  #code-piece-5 #img-7 {
     left: 50%; }
-  #code-piece-6 #img-8 {
+  #code-piece-5 #img-8 {
     left: 75%; }
 
 .color-pink {

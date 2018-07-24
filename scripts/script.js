@@ -16,7 +16,7 @@
     linkToPortfolio.click(function() {
       doc.animate({
         scrollTop: $('#portfolio-0').offset().top
-        }, 500, 'linear');
+        }, 800, 'linear');
     });
 
     menuButton.click(function() {

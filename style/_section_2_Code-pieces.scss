@@ -4,16 +4,16 @@
   line-height: 100vh;
 }
 
-#code-piece-1 {
+#code-piece-0 {
   @extend %code;
 }
 
-#code-piece-2 {
+#code-piece-1 {
   @extend %code;
   font-size: 6rem;
 }
 
-#code-piece-3 {
+#code-piece-2 {
   position: relative;
   p { 
     font-size: 4rem;
@@ -25,19 +25,19 @@
   }
 }
 
-#code-piece-4 {
+#code-piece-3 {
   font-size: 1.5rem;
   padding-top: 4rem;
   line-height: 2rem;
   position: relative;
 }
 
-#code-piece-5 {
+#code-piece-4 {
   font-size: 6rem;
   position: relative;
 }
 
-#code-piece-6 {
+#code-piece-5 {
   font-size: 6.5rem;
   position: relative;
   background: #FF006B;
