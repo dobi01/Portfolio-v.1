@@ -17,10 +17,11 @@
     color: $blue;
     padding: 3rem 0 0 8rem;
     list-style-type: none;
-    font-size: 1.2rem;
+    font-size: 1.23rem;
     li {
       color: $violet;
       padding-top: .2rem;
+      padding-left: .1rem;
       font-size: 1.1rem;
     }
   }
@@ -29,5 +30,9 @@
     color: $gray;
     margin-top: 7rem;
     display: block;
+    transition: all 1s ease-in-out;
+    &:hover {
+      font-size: 1.1rem;
+    }
   }
 }

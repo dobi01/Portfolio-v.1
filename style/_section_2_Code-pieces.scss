@@ -17,7 +17,7 @@
   position: relative;
   p { 
     font-size: 4rem;
-    span {
+    .pad-5 {
       display: block;
       padding-left: 7rem;
       padding-top: .7rem;
@@ -27,7 +27,6 @@
 
 #code-piece-3 {
   font-size: 1.5rem;
-  padding-top: 4rem;
   line-height: 2rem;
   position: relative;
 }
@@ -35,6 +34,7 @@
 #code-piece-4 {
   font-size: 6rem;
   position: relative;
+  padding-top: 2rem;
 }
 
 #code-piece-5 {
@@ -63,10 +63,10 @@
     transform: scaleX(-1);
   }
   #img-1 { left: -5%; }
-  #img-2 { left: 20%; }
-  #img-3 { left: 40%; }
-  #img-4 { left: 60%; }
-  #img-5 { left: 90%; }
+  #img-2 { left: 15%; }
+  #img-3 { left: 35%; }
+  #img-4 { left: 55%; }
+  #img-5 { left: 75%; }
   #img-1, #img-2, #img-3, #img-4, #img-5 { 
     transform: scaleY(-1);
     top: 0;
@@ -74,10 +74,10 @@
     margin-top: 0;
     animation: img-multiplying-0 9s linear infinite;
   }
-  #img-6 { left: 3%; animation: img-multiplying-6 6s linear infinite; }
-  #img-7 { left: 25%; animation: img-multiplying-7 4s linear infinite; }
-  #img-8 { left: 50%; animation: img-multiplying-8 7s linear infinite; }
-  #img-9 { left: 75%; animation: img-multiplying-7 5s linear infinite; }
+  #img-6 { left: -5%; animation: img-multiplying-6 6s linear infinite; }
+  #img-7 { left: 20%; animation: img-multiplying-7 4s linear infinite; }
+  #img-8 { left: 45%; animation: img-multiplying-8 7s linear infinite; }
+  #img-9 { left: 70%; animation: img-multiplying-7 5s linear infinite; }
 }
 
 @keyframes img-multiplying-6 {
@@ -98,30 +98,6 @@
   100% { opacity: 1; }
 }
 
-// @keyframes img-multiplying-6 {
-//   0% { left: 0%; opacity: 1; }
-//   50% { left: 3%; opacity: .2; }
-//   100% { left: 0%; opacity: 1; }
-// }
-
-// @keyframes img-multiplying-7 {
-//   0% { left: 22%; opacity: .2; }
-//   50% { left: 25%; opacity: 1; }
-//   100% { left: 22%; opacity: .2; }
-// }
-
-// @keyframes img-multiplying-8 {
-//   0% { left: 50%; opacity: 1; }
-//   50% { left: 47%; opacity: .5; }
-//   100% { left: 50%; opacity: 1; }
-// }
-
-// @keyframes img-multiplying-9 {
-//   0% { left: 75%; opacity: .2; }
-//   50% { left: 78%; opacity: 1; }
-//   100% { left: 75%; opacity: .2; }
-// }
-
 .color-pink { color: $pink; }
 .color-blue { color: $blue; }
 .color-violet { color: $violet; }
@@ -133,23 +109,63 @@
 .pad-3 { padding-left: 13.3rem; }
 .pad-4 { padding-left: 6rem; }
 
-.gradient-box {
-  background: #ff007e;
-  background: linear-gradient(45deg, #ff007e 0%,#1278f5 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff007e', endColorstr='#1278f5',GradientType=1 );
-  height: 50rem;
-  width: 50rem;
-  transform: rotate(-20deg);
+.box-circle-1 {
+  left: 20%;
+  top: 70%;
 }
 
-.gradient-box-1 {
-  position: absolute;
-  left: -47rem;
-  bottom: -6rem;
+.box-circle-2 {
+  left: 80%;
+  top: 40%;
 }
 
-.gradient-box-2 {
+.box-circle-3 {
+  left: 15%;
+  top: 65%;
+}
+
+.gradient-border {
+  background: #fff;
+  position: relative;
+  border-radius: 50%;
+  height: 5rem;
+  width: 5rem;
+  text-align: center;
+  line-height: 5rem;
+  &:hover {
+    &::after {
+      z-index: -1;
+    }
+  }
+}
+
+.circle-2 {
+  height: 13rem;
+  width: 13rem;
+  line-height: 13rem;
+}
+
+.circle-3 {
+  height: 3rem;
+  width: 3rem;
+  line-height: 3rem;
+}
+
+.gradient-border:after {
+  content: '';
   position: absolute;
-  right: -45rem;
-  top: -5rem;
+  top: calc(-1 * 4px);
+  left: calc(-1 * 4px);
+  height: calc(100% + 4px * 2);
+  width: calc(100% + 4px * 2);
+  background: linear-gradient(90deg, $pink, $blue);
+  border-radius: 50%;
+  animation: animate-gradient 4s ease-in-out alternate infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes animate-gradient {
+	0% { background-position: 0% 50%;	}
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
 }

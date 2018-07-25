@@ -10,6 +10,10 @@ nav {
       font-size: 4rem;
       line-height: 100vh;
       z-index: 10;
+      transition: font-size .5s ease-in-out;
+      &:hover {
+        font-size: 4.1rem;
+      }
     }
   }
 }
@@ -56,6 +60,6 @@ animation: clockwise 10s -0.5s linear infinite;
 
 @keyframes counterclockwise {
 	0% {transform: rotateZ(0deg) scaleX(.9) scaleY(.9)}
-	50% {transform: rotateZ(-180deg) scaleX(1.1) scaleY(1.1)}
+	50% {transform: rotateZ(-180deg) scaleX(1) scaleY(1)}
 	100% {transform: rotateZ(-360deg) scaleX(.9) scaleY(.9)}
 }

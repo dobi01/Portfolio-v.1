@@ -49,11 +49,23 @@
   }
 }
 
+#portfolio-2 {
+  position: relative;
+  span {
+    transform: translateY(-52%);
+    &:first-of-type {
+      top: 52%;
+    }
+    &:last-of-type {
+      top: 52%;
+    }
+  }
+}
+
 .figure--right {
   margin: 17rem 0 0 5rem !important;
 }
 
-.figure--last {
-  margin: 9rem auto !important; 
-  // transform: rotate(-20deg);
+.figure--center {
+  margin: 0 !important; 
 }
