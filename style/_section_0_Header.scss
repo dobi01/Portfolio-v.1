@@ -64,7 +64,6 @@ header {
   .col-7 {
     position: relative;
     height: 100vh;
-    // border: 1px solid red;
     @media (orientation: portrait) {
       height: 50vh;
     }
@@ -72,14 +71,11 @@ header {
       font-size: 4.5rem;
       padding-left: 2rem;
       @media (orientation: portrait) {
-        // font-size: 3rem;
         padding-left: 0;
         left: 50%;
       }
       @media (max-width: 1350px) and (orientation: landscape) {
         padding-left: 4rem;
-        
-
       }
       @media (max-width: 1270px) and (orientation: landscape) {
         left: 40%;
@@ -87,25 +83,16 @@ header {
       @media (max-width: 950px) and (orientation: landscape) {
         padding-left: 0;
       }
-      // @media (orientation: portrait) {
-      //   // font-size: 3rem;
-      //   padding-left: 0;
-      //   left: 50%;
-      // }
       span {
         color: $blue;
         display: block;
-        // color: $violet;
         @media (orientation: portrait) {
-          // text-align: center;
         }
         &:nth-of-type(1) {
           margin-bottom: 5rem;
-          // color: $pink;
           @media (orientation: portrait) {
             text-align: center;
             margin-bottom: 3rem;
-            // color: $pink;
           }
         }
         &:nth-of-type(2) {
@@ -113,7 +100,6 @@ header {
           padding-left: .3rem;
           @media (orientation: portrait) {
             font-size: 2.5rem;
-            // padding-left: 2rem;
           }
         }
         &:nth-of-type(3) {
@@ -135,7 +121,6 @@ header {
           padding-left: 14rem;
           @media (orientation: portrait) {
             font-size: 3rem;
-            // padding-left: 13rem;
           }
         }
       }

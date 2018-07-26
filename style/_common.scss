@@ -53,3 +53,16 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.center-m {
+  margin: 0 auto;
+  @media (max-width: 1230px) {
+    width: 500px;
+  }
+  @media (max-width: 500px) {
+    width: 300px;
+  }
+  @media (max-width: 300px) {
+    width: 250px;
+  }
+}
