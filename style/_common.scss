@@ -17,13 +17,31 @@ html {
   background-color: #fff;
   font-size: 100%;
   overflow-x: hidden;
+  @media (min-width: 1160px) and (max-width: 1500px) {
+    font-size: 90%;
+  }
+  @media (max-width: 1160px) {
+    font-size: 80%;
+  }
+  @media (max-width: 950px) {
+    font-size: 70%;
+  }
+  @media (max-height: 600px) and (orientation: portrait) {
+    font-size: 60%;
+  }
+  @media (max-height: 550px) and (orientation: portrait) {
+    font-size: 50%;
+  }
+  @media (max-height: 500px) and (orientation: portrait) {
+    font-size: 40%;
+  }
+  @media (max-height: 400px) and (orientation: portrait) {
+    font-size: 35%;
+  }
+  @media (max-height: 325px) and (orientation: portrait) {
+    font-size: 30%;
+  }
 }
-
-// @media (max-width: 768px) {
-//   html {
-//     font-size: 60%;
-//   }
-// }
 
 section {
   height: 100vh;;

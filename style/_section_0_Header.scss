@@ -12,47 +12,131 @@ header {
     outline: none;
     cursor: pointer;
     z-index: 10;
+    @media (max-width: 400px) {
+      height: 40px;
+    }
     i {
       padding: 10px;
       font-size: 40px;
       color: $pink;
       transition: color 1s ease-in-out;
+      @media (max-width: 400px) {
+        font-size: 25px;
+      }
       &:hover {
         color: $violet;
       }
     }
   }
-  img {
-    margin-top: 5vh;
-    height: 95vh;
-    min-width: 1px;
+  .portrait-mode-only {
+    display: none;
+    @media (orientation: portrait) {
+      display: block;
+      height: 50vh;
+    }
+    img {
+      @media (orientation: portrait) {
+        height: 50vh;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+  .col-5 {
+    @media (max-width: 1270px) and (orientation: landscape) {
+      background: url('../img/portret4.png') no-repeat right / cover;
+      margin-top: 5vh;
+      height: 95vh;
+    }
+    @media (orientation: portrait) {
+      display: none;
+    }
+    img {
+      margin-top: 5vh;
+      height: 95vh;
+      @media (max-width: 1270px) and (orientation: landscape),
+      (orientation: portrait) {
+        display: none;
+      }
+    }
   }
   .col-7 {
     position: relative;
     height: 100vh;
+    // border: 1px solid red;
+    @media (orientation: portrait) {
+      height: 50vh;
+    }
     h1 {
       font-size: 4.5rem;
       padding-left: 2rem;
+      @media (orientation: portrait) {
+        // font-size: 3rem;
+        padding-left: 0;
+        left: 50%;
+      }
+      @media (max-width: 1350px) and (orientation: landscape) {
+        padding-left: 4rem;
+        
+
+      }
+      @media (max-width: 1270px) and (orientation: landscape) {
+        left: 40%;
+      }
+      @media (max-width: 950px) and (orientation: landscape) {
+        padding-left: 0;
+      }
+      // @media (orientation: portrait) {
+      //   // font-size: 3rem;
+      //   padding-left: 0;
+      //   left: 50%;
+      // }
       span {
         color: $blue;
         display: block;
+        // color: $violet;
+        @media (orientation: portrait) {
+          // text-align: center;
+        }
         &:nth-of-type(1) {
           margin-bottom: 5rem;
+          // color: $pink;
+          @media (orientation: portrait) {
+            text-align: center;
+            margin-bottom: 3rem;
+            // color: $pink;
+          }
         }
         &:nth-of-type(2) {
           font-size: 3.5rem;
           padding-left: .3rem;
+          @media (orientation: portrait) {
+            font-size: 2.5rem;
+            // padding-left: 2rem;
+          }
         }
         &:nth-of-type(3) {
           padding-left: 6rem;
+          @media (orientation: portrait) {
+            font-size: 3rem;
+          }
         }
         &:nth-of-type(4) {
           font-size: 5.5rem;
           color: $pink;
           padding-left: 2.5rem;
+          @media (orientation: portrait) {
+            font-size: 3.5rem;
+            padding-left: 3.5rem;
+          }
         }
         &:nth-of-type(5) {
           padding-left: 14rem;
+          @media (orientation: portrait) {
+            font-size: 3rem;
+            // padding-left: 13rem;
+          }
         }
       }
     }

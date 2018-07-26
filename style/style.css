@@ -76,6 +76,45 @@ section {
 .col-12 {
   width: 100%; }
 
+@media (orientation: portrait) {
+  .col-p-0 {
+    width: 0%; }
+
+  .col-p-1 {
+    width: 8.33%; }
+
+  .col-p-2 {
+    width: 16.66%; }
+
+  .col-p-3 {
+    width: 25%; }
+
+  .col-p-4 {
+    width: 33.33%; }
+
+  .col-p-5 {
+    width: 41.66%; }
+
+  .col-p-6 {
+    width: 50%; }
+
+  .col-p-7 {
+    width: 58.33%; }
+
+  .col-p-8 {
+    width: 66.66%; }
+
+  .col-p-9 {
+    width: 75%; }
+
+  .col-p-10 {
+    width: 83.33%; }
+
+  .col-p-11 {
+    width: 91.66%; }
+
+  .col-p-12 {
+    width: 100%; } }
 @media (max-width: 1200px) {
   .col-m-0 {
     width: 0%; }
@@ -163,6 +202,30 @@ html {
   background-color: #fff;
   font-size: 100%;
   overflow-x: hidden; }
+  @media (min-width: 1160px) and (max-width: 1500px) {
+    html {
+      font-size: 90%; } }
+  @media (max-width: 1160px) {
+    html {
+      font-size: 80%; } }
+  @media (max-width: 950px) {
+    html {
+      font-size: 70%; } }
+  @media (max-height: 600px) and (orientation: portrait) {
+    html {
+      font-size: 60%; } }
+  @media (max-height: 550px) and (orientation: portrait) {
+    html {
+      font-size: 50%; } }
+  @media (max-height: 500px) and (orientation: portrait) {
+    html {
+      font-size: 40%; } }
+  @media (max-height: 400px) and (orientation: portrait) {
+    html {
+      font-size: 35%; } }
+  @media (max-height: 325px) and (orientation: portrait) {
+    html {
+      font-size: 30%; } }
 
 section {
   height: 100vh; }
@@ -241,39 +304,100 @@ header {
     outline: none;
     cursor: pointer;
     z-index: 10; }
+    @media (max-width: 400px) {
+      header button {
+        height: 40px; } }
     header button i {
       padding: 10px;
       font-size: 40px;
       color: #ff006b;
       transition: color 1s ease-in-out; }
+      @media (max-width: 400px) {
+        header button i {
+          font-size: 25px; } }
       header button i:hover {
         color: #7800ff; }
-  header img {
+  header .portrait-mode-only {
+    display: none; }
+    @media (orientation: portrait) {
+      header .portrait-mode-only {
+        display: block;
+        height: 50vh; } }
+    @media (orientation: portrait) {
+      header .portrait-mode-only img {
+        height: 50vh;
+        margin: 0 auto;
+        display: block;
+        text-align: center; } }
+  @media (max-width: 1270px) and (orientation: landscape) {
+    header .col-5 {
+      background: url("../img/portret4.png") no-repeat right/cover;
+      margin-top: 5vh;
+      height: 95vh; } }
+  @media (orientation: portrait) {
+    header .col-5 {
+      display: none; } }
+  header .col-5 img {
     margin-top: 5vh;
-    height: 95vh;
-    min-width: 1px; }
+    height: 95vh; }
+    @media (max-width: 1270px) and (orientation: landscape), (orientation: portrait) {
+      header .col-5 img {
+        display: none; } }
   header .col-7 {
     position: relative;
     height: 100vh; }
+    @media (orientation: portrait) {
+      header .col-7 {
+        height: 50vh; } }
     header .col-7 h1 {
       font-size: 4.5rem;
       padding-left: 2rem; }
+      @media (orientation: portrait) {
+        header .col-7 h1 {
+          padding-left: 0;
+          left: 50%; } }
+      @media (max-width: 1350px) and (orientation: landscape) {
+        header .col-7 h1 {
+          padding-left: 4rem; } }
+      @media (max-width: 1270px) and (orientation: landscape) {
+        header .col-7 h1 {
+          left: 40%; } }
+      @media (max-width: 950px) and (orientation: landscape) {
+        header .col-7 h1 {
+          padding-left: 0; } }
       header .col-7 h1 span {
         color: #1278f5;
         display: block; }
         header .col-7 h1 span:nth-of-type(1) {
           margin-bottom: 5rem; }
+          @media (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(1) {
+              text-align: center;
+              margin-bottom: 3rem; } }
         header .col-7 h1 span:nth-of-type(2) {
           font-size: 3.5rem;
           padding-left: .3rem; }
+          @media (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(2) {
+              font-size: 2.5rem; } }
         header .col-7 h1 span:nth-of-type(3) {
           padding-left: 6rem; }
+          @media (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(3) {
+              font-size: 3rem; } }
         header .col-7 h1 span:nth-of-type(4) {
           font-size: 5.5rem;
           color: #ff006b;
           padding-left: 2.5rem; }
+          @media (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(4) {
+              font-size: 3.5rem;
+              padding-left: 3.5rem; } }
         header .col-7 h1 span:nth-of-type(5) {
           padding-left: 14rem; }
+          @media (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(5) {
+              font-size: 3rem; } }
 
 @keyframes img-multiplying-0 {
   0% {
