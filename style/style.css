@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Offside");
+@import url(https://fonts.googleapis.com/css?family=Offside);
 *, *:after, *:before {
   box-sizing: border-box;
   margin: 0;
@@ -293,11 +293,13 @@ header {
       color: #ff006b;
       font-size: 4rem;
       padding-top: 1rem; }
-#about ul {
+#about h2 {
   color: #1278f5;
-  padding: 3rem 0 0 8rem;
-  list-style-type: none;
-  font-size: 1.23rem; }
+  font-size: 1.23rem;
+  padding: 3rem 0 0 8rem; }
+#about ul {
+  padding: 0 0 0 8rem;
+  list-style-type: none; }
   #about ul li {
     color: #7800ff;
     padding-top: .2rem;
@@ -549,12 +551,12 @@ address {
   font-style: normal;
   text-align: center;
   position: relative; }
-  address h1 {
-    font-size: 3rem;
-    padding-bottom: 1rem; }
   address p {
     font-size: 2rem;
     padding-bottom: .5rem; }
+    address p:first-of-type {
+      font-size: 3rem;
+      padding-bottom: 1rem; }
   address a {
     font-size: 2rem;
     padding-bottom: .5rem; }
