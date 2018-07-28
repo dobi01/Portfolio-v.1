@@ -6,21 +6,89 @@
 
 #code-piece-0 {
   @extend %code;
+  @media (max-width: 650px) {
+    font-size: 7rem;
+  }
+  @media (max-width: 450px) {
+    font-size: 5rem;
+  }
+  @media (max-width: 330px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 260px) {
+    font-size: 3rem;
+  }
 }
 
 #code-piece-1 {
+  position: relative;
   @extend %code;
-  font-size: 6rem;
+  p {
+    font-size: 6rem;
+    @media (max-width: 1050px) {
+      font-size: 5rem;
+    }
+    @media (max-width: 800px) {
+      font-size: 4.5rem;
+    }
+    @media (max-width: 700px) {
+      font-size: 4rem;
+    }
+    @media (max-width: 650px) {
+      font-size: 3.5rem;
+    }
+    @media (max-width: 550px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 500px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 400px) {
+      line-height: 4rem;
+      span {
+        display: block;
+      }
+    }
+  }
 }
 
 #code-piece-2 {
   position: relative;
-  p { 
+  p {
     font-size: 4rem;
     .pad-5 {
       display: block;
       padding-left: 7rem;
       padding-top: .7rem;
+      line-height: 5.8rem;
+      @media (max-width: 850px) {
+        padding-left: 6rem;
+      }
+      @media (max-width: 750px) {
+        padding-left: 5rem;
+        line-height: 4.7rem;
+      }
+      @media (max-width: 650px) {
+        padding-left: 4.4rem;
+        line-height: 4rem;
+        padding-top: .6rem;
+      }
+      @media (max-width: 400px) {
+        padding-left: 3.4rem;
+        line-height: 3.1rem;
+      }
+    }
+    @media (max-width: 850px) {
+      font-size: 3.5rem;
+    }
+    @media (max-width: 750px) {
+      font-size: 3rem;
+    }
+    @media (max-width: 650px) {
+      font-size: 2.5rem;
+    }
+    @media (max-width: 400px) {
+      font-size: 2rem;
     }
   }
 }

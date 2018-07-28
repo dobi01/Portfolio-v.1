@@ -7,6 +7,7 @@ $gray: #7d777a;
   font-family: 'Offside', monospace;
   font-weight: 100;
   color: #000;
+  // border: 1px solid red;
 }
 
 ::-webkit-scrollbar { 
@@ -44,7 +45,7 @@ html {
 }
 
 section {
-  height: 100vh;;
+  height: 100vh;
 }
 
 .center {
@@ -62,7 +63,13 @@ section {
   @media (max-width: 500px) {
     width: 300px;
   }
-  @media (max-width: 300px) {
+  @media (max-width: 400px) {
+    width: 280px;
+  }
+  @media (max-width: 350px) {
     width: 250px;
+  }
+  @media (max-width: 300px) {
+    width: 200px;
   }
 }

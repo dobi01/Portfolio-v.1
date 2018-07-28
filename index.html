@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dobi Okrasa portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <link rel="stylesheet" media="screen" href="style/style.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
@@ -43,53 +43,54 @@
   </header>
   <section id="about" class="page">
     <div class="row">
-      <div class="col-12">
-        <h1>
-          <span>I’m learning</span>
-          <span>the front-end Holy Trinity</span>
-          <span>HTML + CSS + JavaScript</span>
-        </h1>
+        <div class="col-12">
+          <h1>
+            <span>I’m learning</span>
+            <span>the front-end Holy Trinity</span>
+            <span>HTML + CSS + JavaScript</span>
+          </h1>
+        </div>
       </div>
+      <div class="row">
+        <div class="col-4 col-m-12">
+          <div class="center-m">
+            <h2>+ some more or less ortodox deities:</h2>
+            <ul>
+              <li>- git, npm, Webpack</li>
+              <li>- Sass</li>
+              <li>- Bootstrap</li>
+              <li>- jQuery</li>
+              <li>- AJAX</li>
+              <li>- React</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4 col-m-12">
+          <div class="center-m">
+            <h2>+ some rituals:</h2>
+            <ul>
+              <li>- responsive web design</li>
+              <li>- clean code (DRY, BEM, SOLID)</li>
+              <li>- typography &amp; layout design rules</li>
+              <li>- UI &amp; UX design</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-4 col-m-12">
+          <div class="center-m">
+            <h2>Temples I’m familiar with:</h2>
+            <ul>
+              <li>- VS Code</li>
+              <li>- InDesign</li>
+              <li>- Illustrator</li>
+              <li>- Acrobat</li>
+              <li>- Photoshop</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a href="#portfolio-0" class="center" data-page-number="3">Ok, enough talking, show me your work</a>
     </div>
-    <div class="row">
-      <div class="col-4 col-m-12">
-        <div class="center-m">
-          <h2>+ some more or less ortodox deities:</h2>
-          <ul>
-            <li>- git, npm, Webpack</li>
-            <li>- Sass</li>
-            <li>- Bootstrap</li>
-            <li>- jQuery</li>
-            <li>- AJAX</li>
-            <li>- React</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-4 col-m-12">
-        <div class="center-m">
-          <h2>+ some rituals:</h2>
-          <ul>
-            <li>- responsive web design</li>
-            <li>- clean code (DRY, BEM, SOLID)</li>
-            <li>- typography &amp; layout design rules</li>
-            <li>- UI &amp; UX design</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-4 col-m-12">
-        <div class="center-m">
-          <h2>Temples I’m familiar with:</h2>
-          <ul>
-            <li>- VS Code</li>
-            <li>- InDesign</li>
-            <li>- Illustrator</li>
-            <li>- Acrobat</li>
-            <li>- Photoshop</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <a href="#portfolio-0" class="center" data-page-number="3">Ok, enough talking, show me your work</a>
   </section>
   <section id="code-piece-0" class="page">
     <p>dream() ?</p>
@@ -125,7 +126,9 @@
     <span>}</span>
   </section>
   <section id="code-piece-1" class="page">
-    <p>makeItReality() : dream();</p>
+    <p class="center">
+      <span>makeItReality()</span><span>&nbsp;:&nbsp;</span><span>dream();</span>
+    </p>
   </section>
   <section id="portfolio-1" class="portfolio page">
     <span>[</span>
@@ -158,8 +161,9 @@
     <span>]</span>
   </section>
   <section id="code-piece-2" class="page">
-    <p class="center"><span class="color-pink">let&nbsp;</span>beingAliveHack&nbsp;<span class="color-pink">=</span>
-      <span class="pad-5">life.<span class="color-violet">map(</span>x&nbsp;<span class="color-pink">=></span>&nbsp;<span class="color-blue">`conscious&nbsp;`</span>&nbsp;<span class="color-pink">+</span>&nbsp;x<span class="color-violet">);</span></span>
+    <p class="center">
+      <span class="color-pink">let&nbsp;</span>beingAliveHack&nbsp;<span class="color-pink">=</span>
+      <span class="pad-5">life.<span class="color-violet">map(</span>x <span class="color-pink">=></span><span class="color-blue"> `conscious&nbsp;`&nbsp;</span><span class="color-pink">+</span>&nbsp;x<span class="color-violet">);</span></span>    
     </p>
   </section>
   <section id="portfolio-2" class="portfolio page">
@@ -250,7 +254,7 @@
   <section id="code-piece-4" class="page">
     <div class="center">
       <p>
-        <span class="color-pink">while&nbsp;(</span><span class="color-black">noSuccess</span><span class="color-pink">)&nbsp;{</span>
+        <span class="color-pink">while (</span><span class="color-black">noSuccess</span><span class="color-pink">)&nbsp;{</span>
       </p>
       <p class="color-violet pad-4">keepLearning();</p>
       <p class="color-pink">}</p>  
