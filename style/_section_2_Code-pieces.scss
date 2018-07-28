@@ -40,9 +40,6 @@
     @media (max-width: 550px) {
       font-size: 3rem;
     }
-    @media (max-width: 500px) {
-      font-size: 2.5rem;
-    }
     @media (max-width: 400px) {
       line-height: 4rem;
       span {
@@ -61,34 +58,20 @@
       padding-left: 7rem;
       padding-top: .7rem;
       line-height: 5.8rem;
-      @media (max-width: 850px) {
-        padding-left: 6rem;
+      @media (max-width: 500px) {
+        padding-left: 5.2rem;
+        line-height: 4.5rem;
       }
-      @media (max-width: 750px) {
-        padding-left: 5rem;
-        line-height: 4.7rem;
-      }
-      @media (max-width: 650px) {
+      @media (max-width: 350px) {
         padding-left: 4.4rem;
         line-height: 4rem;
-        padding-top: .6rem;
-      }
-      @media (max-width: 400px) {
-        padding-left: 3.4rem;
-        line-height: 3.1rem;
       }
     }
-    @media (max-width: 850px) {
-      font-size: 3.5rem;
-    }
-    @media (max-width: 750px) {
+    @media (max-width: 500px) {
       font-size: 3rem;
     }
-    @media (max-width: 650px) {
+    @media (max-width: 350px) {
       font-size: 2.5rem;
-    }
-    @media (max-width: 400px) {
-      font-size: 2rem;
     }
   }
 }
@@ -97,13 +80,13 @@
   font-size: 1.5rem;
   line-height: 2rem;
   position: relative;
-  @media (max-width: 350px) {
-    font-size: 1.3rem;
-    // line-height: 1.7rem;
+  @media (max-width: 800px) {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
   }
   @media (max-width: 350px) {
-    font-size: 1.2rem;
-    line-height: 1.8rem;
+    font-size: 1.4rem;
+    line-height: 2.1rem;
   }
 }
 
@@ -111,6 +94,27 @@
   font-size: 6rem;
   position: relative;
   padding-top: 2rem;
+  @media (max-width: 800px) {
+    font-size: 5rem;
+  }
+  @media (max-width: 680px) {
+    font-size: 4.5rem;
+  }
+  @media (max-width: 600px) {
+    font-size: 4rem;
+  }
+  @media (max-width: 530px) {
+    font-size: 3.5rem;
+  }
+  @media (max-width: 460px) {
+    font-size: 3rem;
+  }
+  @media (max-width: 370px) {
+    font-size: 2.5rem;
+  }
+  @media (max-width: 280px) {
+    font-size: 2rem;
+  }
 }
 
 #code-piece-5 {
@@ -184,10 +188,24 @@
 .pad-2 { padding-left: 4rem; }
 .pad-3 { 
   padding-left: 13.3rem; 
+  @media (max-width: 800px) {
+    padding-left: 15rem;
+  }
   @media (max-width: 350px) {
-    padding-left: 11.5rem
-  }}
-.pad-4 { padding-left: 6rem; }
+    padding-left: 12.5rem;
+  }
+}
+.pad-4 { padding-left: 6rem; 
+  @media (max-width: 550px) {
+    padding-left: 4rem
+  }
+  @media (max-width: 400px) {
+    padding-left: 3rem
+  }
+  @media (max-width: 320px) {
+    padding-left: 2rem
+  }
+}
 
 .box-circle-1 {
   left: 20%;

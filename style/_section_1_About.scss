@@ -1,9 +1,13 @@
 #about {
   position: relative;
+  height: 100vh;
   h1 {
     font-size: 2rem;
     margin-top: 8rem;
     text-align: center;
+    @media (min-width: 1230px) {
+      margin-top: 0;
+    }
     @media (max-width: 1230px) {
       margin-top: 3rem;
       font-size: 1.5rem;
@@ -22,6 +26,9 @@
           padding: 1rem 2rem 0;
           font-size: 3rem;
         }
+        @media (min-width: 1230px) {
+          padding: 1rem 2rem 2rem;
+        }
       }
     }
   }
@@ -30,9 +37,6 @@
       color: $blue;
       font-size: 1.23rem;
       padding: 3rem 0 0 8rem;
-      @media (max-width: 1230px) {
-        padding: 2rem 0 0 8rem;
-      }
       @media (max-width: 1160px) {
         font-size: 1.5rem;
       }
@@ -61,11 +65,11 @@
         }
         @media (max-width: 950px) {
           font-size: 1.5rem;
-          line-height: 1.9rem;
+          line-height: 1.95rem;
         }
         @media (max-width: 460px) {
           font-size: 1.3rem;
-          line-height: 1.6rem;
+          line-height: 1.8rem;
         }
       }
     }

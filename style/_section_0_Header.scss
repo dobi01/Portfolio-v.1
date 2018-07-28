@@ -44,7 +44,7 @@ header {
     }
   }
   .col-5 {
-    @media (max-width: 1270px) and (orientation: landscape) {
+    @media (orientation: landscape) {
       background: url('../img/portret4.png') no-repeat right / cover;
       margin-top: 5vh;
       height: 95vh;
@@ -52,12 +52,18 @@ header {
     @media (orientation: portrait) {
       display: none;
     }
+    @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
+      background-image: none;
+    }
     img {
       margin-top: 5vh;
       height: 95vh;
-      @media (max-width: 1270px) and (orientation: landscape),
+      @media (orientation: landscape),
       (orientation: portrait) {
         display: none;
+      }
+      @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
+        display: inline;
       }
     }
   }
@@ -74,6 +80,15 @@ header {
         padding-left: 0;
         left: 50%;
       }
+      @media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+        font-size: 6rem;
+      }
+      @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+        font-size: 5rem;
+      }
+      @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+        font-size: 4.5rem;
+      }
       @media (max-width: 1350px) and (orientation: landscape) {
         padding-left: 4rem;
       }
@@ -81,7 +96,13 @@ header {
         left: 40%;
       }
       @media (max-width: 950px) and (orientation: landscape) {
-        padding-left: 0;
+        padding-left: 2rem;
+      }
+      @media (max-height: 480px) and (orientation: landscape) {
+        font-size: 4rem;
+      }
+      @media (max-height: 430px) and (orientation: landscape) {
+        font-size: 3rem;
       }
       span {
         color: $blue;
@@ -90,9 +111,13 @@ header {
         }
         &:nth-of-type(1) {
           margin-bottom: 5rem;
+          padding-left: .2rem;
           @media (orientation: portrait) {
             text-align: center;
             margin-bottom: 3rem;
+          }
+          @media (max-height: 430px) and (orientation: landscape) {
+            margin-bottom: 2rem;
           }
         }
         &:nth-of-type(2) {
@@ -101,11 +126,41 @@ header {
           @media (orientation: portrait) {
             font-size: 2.5rem;
           }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            font-size: 5rem;
+          }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            font-size: 4rem;
+          }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            font-size: 3.5rem;
+          }
+          @media (max-height: 480px) and (orientation: landscape) {
+            font-size: 3.5rem;
+          }
+          @media (max-height: 430px) and (orientation: landscape) {
+            font-size: 2.5rem;
+          }
         }
         &:nth-of-type(3) {
           padding-left: 6rem;
           @media (orientation: portrait) {
             font-size: 3rem;
+          }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            font-size: 5rem;
+          }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            font-size: 4rem;
+          }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            font-size: 3.5rem;
+          }
+          @media (max-height: 480px) and (orientation: landscape) {
+            font-size: 3.5rem;
+          }
+          @media (max-height: 430px) and (orientation: landscape) {
+            font-size: 2.5rem;
           }
         }
         &:nth-of-type(4) {
@@ -116,11 +171,35 @@ header {
             font-size: 3.5rem;
             padding-left: 3.5rem;
           }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            font-size: 7rem;
+          }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            font-size: 6rem;
+          }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            font-size: 5.5rem;
+          }
+          @media (max-height: 480px) and (orientation: landscape) {
+            font-size: 4.5rem;
+          }
+          @media (max-height: 430px) and (orientation: landscape) {
+            font-size: 3.5rem;
+          }
         }
         &:nth-of-type(5) {
           padding-left: 14rem;
           @media (orientation: portrait) {
             font-size: 3rem;
+          }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            font-size: 5rem;
+          }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            font-size: 4.5rem;
+          }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            padding-right: 6rem;
           }
         }
       }

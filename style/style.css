@@ -205,6 +205,9 @@ html {
   background-color: #fff;
   font-size: 100%;
   overflow-x: hidden; }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 110%; } }
   @media (min-width: 1160px) and (max-width: 1500px) {
     html {
       font-size: 90%; } }
@@ -214,21 +217,9 @@ html {
   @media (max-width: 950px) {
     html {
       font-size: 70%; } }
-  @media (max-height: 600px) and (orientation: portrait) {
+  @media (max-width: 800px) {
     html {
       font-size: 60%; } }
-  @media (max-height: 550px) and (orientation: portrait) {
-    html {
-      font-size: 50%; } }
-  @media (max-height: 500px) and (orientation: portrait) {
-    html {
-      font-size: 40%; } }
-  @media (max-height: 400px) and (orientation: portrait) {
-    html {
-      font-size: 35%; } }
-  @media (max-height: 325px) and (orientation: portrait) {
-    html {
-      font-size: 30%; } }
 
 section {
   height: 100vh; }
@@ -238,6 +229,14 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+@media (min-width: 1230px) {
+  .center-l {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%; } }
 
 .center-m {
   margin: 0 auto; }
@@ -350,7 +349,7 @@ header {
         margin: 0 auto;
         display: block;
         text-align: center; } }
-  @media (max-width: 1270px) and (orientation: landscape) {
+  @media (orientation: landscape) {
     header .col-5 {
       background: url("../img/portret4.png") no-repeat right/cover;
       margin-top: 5vh;
@@ -358,12 +357,18 @@ header {
   @media (orientation: portrait) {
     header .col-5 {
       display: none; } }
+  @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
+    header .col-5 {
+      background-image: none; } }
   header .col-5 img {
     margin-top: 5vh;
     height: 95vh; }
-    @media (max-width: 1270px) and (orientation: landscape), (orientation: portrait) {
+    @media (orientation: landscape), (orientation: portrait) {
       header .col-5 img {
         display: none; } }
+    @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
+      header .col-5 img {
+        display: inline; } }
   header .col-7 {
     position: relative;
     height: 100vh; }
@@ -377,6 +382,15 @@ header {
         header .col-7 h1 {
           padding-left: 0;
           left: 50%; } }
+      @media (min-width: 1366px) and (min-height: 1024px) and (orientation: landscape) {
+        header .col-7 h1 {
+          font-size: 6rem; } }
+      @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+        header .col-7 h1 {
+          font-size: 5rem; } }
+      @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+        header .col-7 h1 {
+          font-size: 4.5rem; } }
       @media (max-width: 1350px) and (orientation: landscape) {
         header .col-7 h1 {
           padding-left: 4rem; } }
@@ -385,20 +399,45 @@ header {
           left: 40%; } }
       @media (max-width: 950px) and (orientation: landscape) {
         header .col-7 h1 {
-          padding-left: 0; } }
+          padding-left: 2rem; } }
+      @media (max-height: 480px) and (orientation: landscape) {
+        header .col-7 h1 {
+          font-size: 4rem; } }
+      @media (max-height: 430px) and (orientation: landscape) {
+        header .col-7 h1 {
+          font-size: 3rem; } }
       header .col-7 h1 span {
         color: #1278f5;
         display: block; }
         header .col-7 h1 span:nth-of-type(1) {
-          margin-bottom: 5rem; }
+          margin-bottom: 5rem;
+          padding-left: .2rem; }
           @media (orientation: portrait) {
             header .col-7 h1 span:nth-of-type(1) {
               text-align: center;
               margin-bottom: 3rem; } }
+          @media (max-height: 430px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(1) {
+              margin-bottom: 2rem; } }
         header .col-7 h1 span:nth-of-type(2) {
           font-size: 3.5rem;
           padding-left: .3rem; }
           @media (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(2) {
+              font-size: 2.5rem; } }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(2) {
+              font-size: 5rem; } }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(2) {
+              font-size: 4rem; } }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(2) {
+              font-size: 3.5rem; } }
+          @media (max-height: 480px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(2) {
+              font-size: 3.5rem; } }
+          @media (max-height: 430px) and (orientation: landscape) {
             header .col-7 h1 span:nth-of-type(2) {
               font-size: 2.5rem; } }
         header .col-7 h1 span:nth-of-type(3) {
@@ -406,6 +445,21 @@ header {
           @media (orientation: portrait) {
             header .col-7 h1 span:nth-of-type(3) {
               font-size: 3rem; } }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(3) {
+              font-size: 5rem; } }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(3) {
+              font-size: 4rem; } }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(3) {
+              font-size: 3.5rem; } }
+          @media (max-height: 480px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(3) {
+              font-size: 3.5rem; } }
+          @media (max-height: 430px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(3) {
+              font-size: 2.5rem; } }
         header .col-7 h1 span:nth-of-type(4) {
           font-size: 5.5rem;
           color: #ff006b;
@@ -414,11 +468,35 @@ header {
             header .col-7 h1 span:nth-of-type(4) {
               font-size: 3.5rem;
               padding-left: 3.5rem; } }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(4) {
+              font-size: 7rem; } }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(4) {
+              font-size: 6rem; } }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(4) {
+              font-size: 5.5rem; } }
+          @media (max-height: 480px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(4) {
+              font-size: 4.5rem; } }
+          @media (max-height: 430px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(4) {
+              font-size: 3.5rem; } }
         header .col-7 h1 span:nth-of-type(5) {
           padding-left: 14rem; }
           @media (orientation: portrait) {
             header .col-7 h1 span:nth-of-type(5) {
               font-size: 3rem; } }
+          @media (min-width: 1024px) and (min-height: 1366px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(5) {
+              font-size: 5rem; } }
+          @media (min-width: 768px) and (min-height: 1024px) and (orientation: portrait) {
+            header .col-7 h1 span:nth-of-type(5) {
+              font-size: 4.5rem; } }
+          @media (min-width: 1351px) and (min-height: 1024px) and (orientation: landscape) {
+            header .col-7 h1 span:nth-of-type(5) {
+              padding-right: 6rem; } }
 
 @keyframes img-multiplying-0 {
   0% {
@@ -428,11 +506,15 @@ header {
   100% {
     opacity: 1; } }
 #about {
-  position: relative; }
+  position: relative;
+  height: 100vh; }
   #about h1 {
     font-size: 2rem;
     margin-top: 8rem;
     text-align: center; }
+    @media (min-width: 1230px) {
+      #about h1 {
+        margin-top: 0; } }
     @media (max-width: 1230px) {
       #about h1 {
         margin-top: 3rem;
@@ -451,13 +533,13 @@ header {
           #about h1 span:nth-of-type(3) {
             padding: 1rem 2rem 0;
             font-size: 3rem; } }
+        @media (min-width: 1230px) {
+          #about h1 span:nth-of-type(3) {
+            padding: 1rem 2rem 2rem; } }
   #about div h2 {
     color: #1278f5;
     font-size: 1.23rem;
     padding: 3rem 0 0 8rem; }
-    @media (max-width: 1230px) {
-      #about div h2 {
-        padding: 2rem 0 0 8rem; } }
     @media (max-width: 1160px) {
       #about div h2 {
         font-size: 1.5rem; } }
@@ -486,11 +568,11 @@ header {
       @media (max-width: 950px) {
         #about div ul li {
           font-size: 1.5rem;
-          line-height: 1.9rem; } }
+          line-height: 1.95rem; } }
       @media (max-width: 460px) {
         #about div ul li {
           font-size: 1.3rem;
-          line-height: 1.6rem; } }
+          line-height: 1.8rem; } }
   #about a {
     text-align: center;
     color: #7d777a;
@@ -540,9 +622,6 @@ header {
     @media (max-width: 550px) {
       #code-piece-1 p {
         font-size: 3rem; } }
-    @media (max-width: 500px) {
-      #code-piece-1 p {
-        font-size: 2.5rem; } }
     @media (max-width: 400px) {
       #code-piece-1 p {
         line-height: 4rem; }
@@ -558,51 +637,59 @@ header {
       padding-left: 7rem;
       padding-top: .7rem;
       line-height: 5.8rem; }
-      @media (max-width: 850px) {
+      @media (max-width: 500px) {
         #code-piece-2 p .pad-5 {
-          padding-left: 6rem; } }
-      @media (max-width: 750px) {
-        #code-piece-2 p .pad-5 {
-          padding-left: 5rem;
-          line-height: 4.7rem; } }
-      @media (max-width: 650px) {
+          padding-left: 5.2rem;
+          line-height: 4.5rem; } }
+      @media (max-width: 350px) {
         #code-piece-2 p .pad-5 {
           padding-left: 4.4rem;
-          line-height: 4rem;
-          padding-top: .6rem; } }
-      @media (max-width: 400px) {
-        #code-piece-2 p .pad-5 {
-          padding-left: 3.4rem;
-          line-height: 3.1rem; } }
-    @media (max-width: 850px) {
-      #code-piece-2 p {
-        font-size: 3.5rem; } }
-    @media (max-width: 750px) {
+          line-height: 4rem; } }
+    @media (max-width: 500px) {
       #code-piece-2 p {
         font-size: 3rem; } }
-    @media (max-width: 650px) {
+    @media (max-width: 350px) {
       #code-piece-2 p {
         font-size: 2.5rem; } }
-    @media (max-width: 400px) {
-      #code-piece-2 p {
-        font-size: 2rem; } }
 
 #code-piece-3 {
   font-size: 1.5rem;
   line-height: 2rem;
   position: relative; }
+  @media (max-width: 800px) {
+    #code-piece-3 {
+      font-size: 1.8rem;
+      line-height: 2.6rem; } }
   @media (max-width: 350px) {
     #code-piece-3 {
-      font-size: 1.3rem; } }
-  @media (max-width: 350px) {
-    #code-piece-3 {
-      font-size: 1.2rem;
-      line-height: 1.8rem; } }
+      font-size: 1.4rem;
+      line-height: 2.1rem; } }
 
 #code-piece-4 {
   font-size: 6rem;
   position: relative;
   padding-top: 2rem; }
+  @media (max-width: 800px) {
+    #code-piece-4 {
+      font-size: 5rem; } }
+  @media (max-width: 680px) {
+    #code-piece-4 {
+      font-size: 4.5rem; } }
+  @media (max-width: 600px) {
+    #code-piece-4 {
+      font-size: 4rem; } }
+  @media (max-width: 530px) {
+    #code-piece-4 {
+      font-size: 3.5rem; } }
+  @media (max-width: 460px) {
+    #code-piece-4 {
+      font-size: 3rem; } }
+  @media (max-width: 370px) {
+    #code-piece-4 {
+      font-size: 2.5rem; } }
+  @media (max-width: 280px) {
+    #code-piece-4 {
+      font-size: 2rem; } }
 
 #code-piece-5 {
   font-size: 6.5rem;
@@ -699,12 +786,24 @@ header {
 
 .pad-3 {
   padding-left: 13.3rem; }
+  @media (max-width: 800px) {
+    .pad-3 {
+      padding-left: 15rem; } }
   @media (max-width: 350px) {
     .pad-3 {
-      padding-left: 11.5rem; } }
+      padding-left: 12.5rem; } }
 
 .pad-4 {
   padding-left: 6rem; }
+  @media (max-width: 550px) {
+    .pad-4 {
+      padding-left: 4rem; } }
+  @media (max-width: 400px) {
+    .pad-4 {
+      padding-left: 3rem; } }
+  @media (max-width: 320px) {
+    .pad-4 {
+      padding-left: 2rem; } }
 
 .box-circle-1 {
   left: 20%;
