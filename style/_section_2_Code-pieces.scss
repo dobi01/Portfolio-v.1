@@ -97,6 +97,14 @@
   font-size: 1.5rem;
   line-height: 2rem;
   position: relative;
+  @media (max-width: 350px) {
+    font-size: 1.3rem;
+    // line-height: 1.7rem;
+  }
+  @media (max-width: 350px) {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+  }
 }
 
 #code-piece-4 {
@@ -174,22 +182,57 @@
 
 .pad-1 { padding-left: 2rem; }
 .pad-2 { padding-left: 4rem; }
-.pad-3 { padding-left: 13.3rem; }
+.pad-3 { 
+  padding-left: 13.3rem; 
+  @media (max-width: 350px) {
+    padding-left: 11.5rem
+  }}
 .pad-4 { padding-left: 6rem; }
 
 .box-circle-1 {
   left: 20%;
   top: 70%;
+  @media (max-width: 1100px) {
+    left: 15%;
+    top: 80%;
+  }
+  @media (max-width: 950px) {
+    top: 90%;
+  }
+  @media (max-width: 755px) {
+    display: none;
+  }
 }
 
 .box-circle-2 {
   left: 80%;
   top: 40%;
+  @media (max-width: 1100px) {
+    left: 85%;
+    top: 30%;
+  }
+  @media (max-width: 950px) {
+    top: 20%;
+  }
+  @media (max-width: 755px) {
+    display: none;
+  }
 }
 
 .box-circle-3 {
   left: 15%;
   top: 65%;
+  @media (max-width: 1100px) {
+    left: 10%;
+    top: 75%;
+  }
+  @media (max-width: 950px) {
+    left: 9%;
+    top: 85%;
+  }
+  @media (max-width: 755px) {
+    display: none;
+  }
 }
 
 .gradient-border {

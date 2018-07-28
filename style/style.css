@@ -154,7 +154,10 @@ section {
 
   .col-m-12 {
     width: 100%; } }
-@media (max-width: 768px) {
+@media (max-width: 755px) {
+  .col-s-0 {
+    width: 0; }
+
   .col-s-1 {
     width: 8.33%; }
 
@@ -588,6 +591,13 @@ header {
   font-size: 1.5rem;
   line-height: 2rem;
   position: relative; }
+  @media (max-width: 350px) {
+    #code-piece-3 {
+      font-size: 1.3rem; } }
+  @media (max-width: 350px) {
+    #code-piece-3 {
+      font-size: 1.2rem;
+      line-height: 1.8rem; } }
 
 #code-piece-4 {
   font-size: 6rem;
@@ -689,6 +699,9 @@ header {
 
 .pad-3 {
   padding-left: 13.3rem; }
+  @media (max-width: 350px) {
+    .pad-3 {
+      padding-left: 11.5rem; } }
 
 .pad-4 {
   padding-left: 6rem; }
@@ -696,14 +709,45 @@ header {
 .box-circle-1 {
   left: 20%;
   top: 70%; }
+  @media (max-width: 1100px) {
+    .box-circle-1 {
+      left: 15%;
+      top: 80%; } }
+  @media (max-width: 950px) {
+    .box-circle-1 {
+      top: 90%; } }
+  @media (max-width: 755px) {
+    .box-circle-1 {
+      display: none; } }
 
 .box-circle-2 {
   left: 80%;
   top: 40%; }
+  @media (max-width: 1100px) {
+    .box-circle-2 {
+      left: 85%;
+      top: 30%; } }
+  @media (max-width: 950px) {
+    .box-circle-2 {
+      top: 20%; } }
+  @media (max-width: 755px) {
+    .box-circle-2 {
+      display: none; } }
 
 .box-circle-3 {
   left: 15%;
   top: 65%; }
+  @media (max-width: 1100px) {
+    .box-circle-3 {
+      left: 10%;
+      top: 75%; } }
+  @media (max-width: 950px) {
+    .box-circle-3 {
+      left: 9%;
+      top: 85%; } }
+  @media (max-width: 755px) {
+    .box-circle-3 {
+      display: none; } }
 
 .gradient-border {
   background: #fff;
