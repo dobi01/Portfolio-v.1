@@ -193,6 +193,9 @@ section {
 
   .col-s-12 {
     width: 100%; } }
+@media (max-width: 755px) and (orientation: portrait) {
+  .col-s-12-p {
+    width: 100%; } }
 * {
   font-family: 'Offside', monospace;
   font-weight: 100;
@@ -271,11 +274,21 @@ nav {
       transition: font-size .5s ease-in-out; }
       nav div a:hover {
         font-size: 4.1rem; }
+      @media (max-width: 755px) and (orientation: portrait) {
+        nav div a {
+          line-height: 33.33333vh; } }
+      @media (max-width: 755px) {
+        nav div a {
+          font-size: 3rem; } }
 
 .circle {
   height: 25rem;
   width: 25rem;
   z-index: -1; }
+  @media (max-width: 755px) {
+    .circle {
+      height: 20rem;
+      width: 20rem; } }
 
 .circle:before, .circle:after {
   content: "";

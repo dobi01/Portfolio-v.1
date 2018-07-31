@@ -14,6 +14,12 @@ nav {
       &:hover {
         font-size: 4.1rem;
       }
+      @media (max-width: 755px) and (orientation: portrait) {
+        line-height: 33.33333vh;
+      }
+      @media (max-width: 755px) {
+        font-size: 3rem;
+      }
     }
   }
 }
@@ -22,6 +28,10 @@ nav {
 	height: 25rem;
   width: 25rem;
   z-index: -1;
+  @media (max-width: 755px) {
+    height: 20rem;
+    width: 20rem;
+  }
 }
 
 .circle:before, .circle:after {

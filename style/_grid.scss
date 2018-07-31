@@ -69,3 +69,7 @@
 	.col-s-11 {width: 91.66%;}
 	.col-s-12 {width: 100%;}
 }
+
+@media (max-width: 755px) and (orientation: portrait) {
+	.col-s-12-p {width: 100%;}
+}
