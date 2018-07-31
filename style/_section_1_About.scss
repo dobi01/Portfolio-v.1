@@ -1,6 +1,9 @@
 #about {
   position: relative;
   height: 100vh;
+  .row {
+    padding: 0 5%;
+  }
   h1 {
     font-size: 2rem;
     margin-top: 8rem;
@@ -22,37 +25,29 @@
         color: $pink;
         font-size: 4rem;
         padding-top: 1rem;
+        @media (min-width: 1230px) {
+          padding: 1rem 2rem 2rem;
+        }
         @media (max-width: 600px) {
           padding: 1rem 2rem 0;
           font-size: 3rem;
-        }
-        @media (min-width: 1230px) {
-          padding: 1rem 2rem 2rem;
         }
       }
     }
   }
   div {
+    text-align: center;
     h2 {
       color: $blue;
       font-size: 1.23rem;
-      padding: 3rem 0 0 8rem;
+      padding: 3rem 0 0;
       @media (max-width: 1160px) {
         font-size: 1.5rem;
       }
-      @media (max-width: 950px) {
-        padding: 3rem 1rem 0 8rem;
-      }
-      @media (max-width: 500px) {
-        padding: 3rem 1rem 0 1rem;
-      }
     }
     ul {
-      padding: 0 0 0 8rem;
+      padding: 0 0;
       list-style-type: none;
-      @media (max-width: 500px) {
-        padding: 0 1rem 0 1rem;
-      }
       li {
         color: $violet;
         padding-top: .2rem;

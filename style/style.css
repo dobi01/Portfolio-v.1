@@ -233,7 +233,7 @@ section {
 @media (min-width: 1230px) {
   .center-l {
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 100%; } }
@@ -508,6 +508,8 @@ header {
 #about {
   position: relative;
   height: 100vh; }
+  #about .row {
+    padding: 0 5%; }
   #about h1 {
     font-size: 2rem;
     margin-top: 8rem;
@@ -529,50 +531,43 @@ header {
         color: #ff006b;
         font-size: 4rem;
         padding-top: 1rem; }
+        @media (min-width: 1230px) {
+          #about h1 span:nth-of-type(3) {
+            padding: 1rem 2rem 2rem; } }
         @media (max-width: 600px) {
           #about h1 span:nth-of-type(3) {
             padding: 1rem 2rem 0;
             font-size: 3rem; } }
-        @media (min-width: 1230px) {
-          #about h1 span:nth-of-type(3) {
-            padding: 1rem 2rem 2rem; } }
-  #about div h2 {
-    color: #1278f5;
-    font-size: 1.23rem;
-    padding: 3rem 0 0 8rem; }
-    @media (max-width: 1160px) {
-      #about div h2 {
-        font-size: 1.5rem; } }
-    @media (max-width: 950px) {
-      #about div h2 {
-        padding: 3rem 1rem 0 8rem; } }
-    @media (max-width: 500px) {
-      #about div h2 {
-        padding: 3rem 1rem 0 1rem; } }
-  #about div ul {
-    padding: 0 0 0 8rem;
-    list-style-type: none; }
-    @media (max-width: 500px) {
-      #about div ul {
-        padding: 0 1rem 0 1rem; } }
-    #about div ul li {
-      color: #7800ff;
-      padding-top: .2rem;
-      padding-left: .1rem;
-      font-size: 1.1rem;
-      line-height: 1.4rem; }
+  #about div {
+    text-align: center; }
+    #about div h2 {
+      color: #1278f5;
+      font-size: 1.23rem;
+      padding: 3rem 0 0; }
       @media (max-width: 1160px) {
-        #about div ul li {
-          font-size: 1.3rem;
-          line-height: 1.6rem; } }
-      @media (max-width: 950px) {
-        #about div ul li {
-          font-size: 1.5rem;
-          line-height: 1.95rem; } }
-      @media (max-width: 460px) {
-        #about div ul li {
-          font-size: 1.3rem;
-          line-height: 1.8rem; } }
+        #about div h2 {
+          font-size: 1.5rem; } }
+    #about div ul {
+      padding: 0 0;
+      list-style-type: none; }
+      #about div ul li {
+        color: #7800ff;
+        padding-top: .2rem;
+        padding-left: .1rem;
+        font-size: 1.1rem;
+        line-height: 1.4rem; }
+        @media (max-width: 1160px) {
+          #about div ul li {
+            font-size: 1.3rem;
+            line-height: 1.6rem; } }
+        @media (max-width: 950px) {
+          #about div ul li {
+            font-size: 1.5rem;
+            line-height: 1.95rem; } }
+        @media (max-width: 460px) {
+          #about div ul li {
+            font-size: 1.3rem;
+            line-height: 1.8rem; } }
   #about a {
     text-align: center;
     color: #7d777a;
