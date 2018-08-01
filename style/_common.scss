@@ -18,6 +18,9 @@ html {
   background-color: #fff;
   font-size: 100%;
   overflow-x: hidden;
+  @media (min-width: 2000px) {
+    font-size: 130%;
+  }
   @media (min-width: 1800px) {
     font-size: 110%;
   }

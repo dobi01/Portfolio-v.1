@@ -1,5 +1,9 @@
 .portfolio {
   position: relative;
+  @media (max-height: 500px) and (orientation: landscape) {
+    height: 100% !important;
+    border: 10px solid greenyellow;
+  }
   span {
     font-size: 25rem;
     color: $violet;
@@ -13,20 +17,42 @@
       bottom: -8rem;
     }
   }
+  .row {
+    height: 100vh;
+  }
+  .col-6 {
+   @media (min-width: 500px) {
+    height: 100vh;
+    position: relative; 
+   }
+  }
   .portfolio--color-gray {
     color: $gray;
   }
   figure {
-    margin: 8rem 0 0 17rem; 
     width: 25rem;
+    position: absolute;
+    @media (max-height: 500px) and (orientation: landscape) {
+      position: static;
+    }
+    @media (max-width: 360px) {
+      width: 20rem;
+    }
     h1 {
       color: $violet;
       font-size: 1rem;
+      @media (max-width: 800px) {
+        font-size: 1.3rem;
+        padding-bottom: .1rem;
+      }
     }
     h2 {
       color: $pink;
       font-size: 1.5rem;
       padding-bottom: .7rem;
+      @media (max-width: 800px) {
+        font-size: 1.6rem;
+      }
     }
     .layer {
       background-color: $pink;
@@ -40,11 +66,17 @@
         opacity: 0;
         transition: opacity 1s ease-in-out;
         cursor: pointer;
+        @media (max-width: 360px) {
+          width: 20rem;
+        }
       }
     }
     a {
       color: $blue;
       font-size: 1rem;
+      @media (max-width: 800px) {
+        font-size: 1.3rem;
+      }
     }
   }
 }
@@ -52,18 +84,51 @@
 #portfolio-2 {
   position: relative;
   span {
-    transform: translateY(-52%);
+    position: absolute;
     &:first-of-type {
-      top: 52%;
+      top: 25%;
     }
     &:last-of-type {
-      top: 52%;
+      bottom: '';
+      top: 25.5%;
     }
   }
 }
 
+.figure--left {
+  left: 35%;
+  top: 15%;
+  @media (max-width: 1200px) and (orientation: landscape) {
+    left: 30%;
+  }
+  @media (max-width: 1000px) and (orientation: landscape) {
+    left: 25%;
+  }
+  @media (max-width: 800px) and (orientation: portrait) {
+    left: 35%;
+  }
+  @media (max-width: 500px) and (orientation: portrait) {
+    left: 10%;
+    // top: 20%;
+  }
+}
+
 .figure--right {
-  margin: 17rem 0 0 5rem !important;
+  bottom: 15%;
+  right: 35%;
+  @media (max-width: 1200px) and (orientation: landscape) {
+    right: 30%;
+  }
+  @media (max-width: 1000px) and (orientation: landscape) {
+    right: 25%;
+  }
+  @media (max-width: 800px) and (orientation: portrait) {
+    right: 35%;
+  }
+  @media (max-width: 500px) and (orientation: portrait) {
+    right: 10%;
+    // bottom: 20%;
+  }
 }
 
 .figure--center {
