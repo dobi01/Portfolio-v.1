@@ -23,10 +23,10 @@
 #code-piece-1 {
   position: relative;
   text-align: center;
-  // @extend %code;
   p {
     font-size: 6rem;
-    span:first-of-type {
+    span:first-of-type,
+    span:last-of-type {
       white-space: nowrap;
     }
     @media (max-width: 1050px) {
@@ -48,7 +48,6 @@
       line-height: 4rem;
       span {
         display: block;
-        // height: 4rem;
       }
     }
   }

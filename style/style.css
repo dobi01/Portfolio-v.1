@@ -624,7 +624,8 @@ header {
   text-align: center; }
   #code-piece-1 p {
     font-size: 6rem; }
-    #code-piece-1 p span:first-of-type {
+    #code-piece-1 p span:first-of-type,
+    #code-piece-1 p span:last-of-type {
       white-space: nowrap; }
     @media (max-width: 1050px) {
       #code-piece-1 p {
