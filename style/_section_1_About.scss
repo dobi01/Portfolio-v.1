@@ -1,7 +1,11 @@
 #about {
   position: relative;
+  // border: 5px solid greenyellow;
   @media (max-height: 500px) and (orientation: landscape) {
     height: 100% !important;
+  }
+  @media (max-height: 600px) and (orientation: portrait) {
+    height: 700px !important;
   }
   .row {
     padding: 0 5%;
