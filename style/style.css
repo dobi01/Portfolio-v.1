@@ -208,6 +208,17 @@ section {
   font-weight: 100;
   color: #000; }
 
+::-webkit-scrollbar {
+  width: 10px; }
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; }
+
+::-webkit-scrollbar-thumb {
+  background: #888; }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; }
+
 html {
   background-color: #fff;
   font-size: 100%;
@@ -262,7 +273,8 @@ section {
 nav {
   height: 100vh;
   position: relative;
-  display: none; }
+  display: none;
+  width: calc(100vw - 10px); }
   nav div {
     text-align: center;
     z-index: 10; }

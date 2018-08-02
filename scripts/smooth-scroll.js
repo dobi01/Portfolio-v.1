@@ -86,8 +86,8 @@
     
   // OUR CODE
   
-  var winH = $(window).height();
-  $('.page').height(winH);
+  // var winH = $(window).height();
+  // $('.page').height(winH);
   
   var c = 0;
   var pagesN = $('.page').length;
@@ -119,7 +119,9 @@
           pauseWheel=true;    // SET MOMENTALLY TO TRUE
           delta>0 ? c-- : c++ ;
           activePage=c;
+          console.log(c);
           scrollPage();       // LOOK WHAT HAPPENS WITH OUR FLAG IN THIS fn
+          console.log(c);
           return false;
       }        
   });

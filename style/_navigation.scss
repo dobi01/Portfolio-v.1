@@ -2,6 +2,7 @@ nav {
   height: 100vh;
   position: relative;
   display: none;
+  width: calc(100vw - 10px);
   div {
     text-align: center;
     z-index: 10;
