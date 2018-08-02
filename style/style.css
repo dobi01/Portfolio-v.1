@@ -624,6 +624,8 @@ header {
   text-align: center; }
   #code-piece-1 p {
     font-size: 6rem; }
+    #code-piece-1 p span:first-of-type {
+      white-space: nowrap; }
     @media (max-width: 1050px) {
       #code-piece-1 p {
         font-size: 5rem; } }
@@ -639,7 +641,7 @@ header {
     @media (max-width: 550px) {
       #code-piece-1 p {
         font-size: 3rem; } }
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
       #code-piece-1 p {
         line-height: 4rem; }
         #code-piece-1 p span {

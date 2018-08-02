@@ -26,6 +26,9 @@
   // @extend %code;
   p {
     font-size: 6rem;
+    span:first-of-type {
+      white-space: nowrap;
+    }
     @media (max-width: 1050px) {
       font-size: 5rem;
     }
@@ -41,7 +44,7 @@
     @media (max-width: 550px) {
       font-size: 3rem;
     }
-    @media (max-width: 400px) {
+    @media (max-width: 500px) {
       line-height: 4rem;
       span {
         display: block;
