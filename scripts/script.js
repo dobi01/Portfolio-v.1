@@ -41,5 +41,13 @@
 
     portfolioLayer.hover(turnGray, turnGray);
 
+    // Reload after orientation change
+    let supportsOrientationChange = "onorientationchange" in window,
+      orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
+
+    window.addEventListener(orientationEvent, function() {
+      window.location.reload()
+    }, false); 
+
   });
 })(jQuery);
