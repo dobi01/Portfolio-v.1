@@ -726,6 +726,21 @@ header {
   position: relative;
   background: #FF006B;
   background: linear-gradient(90deg, #FF006B 0%, #1278f5 100%); }
+  @media (max-width: 700px) {
+    #code-piece-5 {
+      font-size: 5rem; } }
+  @media (max-width: 550px) {
+    #code-piece-5 {
+      font-size: 4rem; } }
+  @media (max-width: 430px) {
+    #code-piece-5 {
+      font-size: 3rem; } }
+  @media (max-width: 330px) {
+    #code-piece-5 {
+      font-size: 2rem; } }
+  @media (max-height: 500px) and (orientation: landscape) {
+    #code-piece-5 {
+      font-size: 4rem; } }
   #code-piece-5 div {
     position: absolute;
     bottom: 5%;
@@ -733,6 +748,7 @@ header {
     width: 100%; }
     #code-piece-5 div p {
       margin-left: 5%;
+      margin-right: 5%;
       color: #fff; }
   #code-piece-5 img {
     margin-top: 5vh;
