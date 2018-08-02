@@ -208,9 +208,6 @@ section {
   font-weight: 100;
   color: #000; }
 
-::-webkit-scrollbar {
-  display: none; }
-
 html {
   background-color: #fff;
   font-size: 100%;
