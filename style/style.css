@@ -642,7 +642,8 @@ header {
       #code-piece-1 p {
         line-height: 4rem; }
         #code-piece-1 p span {
-          display: block; } }
+          display: block;
+          height: 4rem; } }
 
 #code-piece-2 {
   position: relative; }
