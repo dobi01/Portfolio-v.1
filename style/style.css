@@ -200,7 +200,7 @@ section {
   .col-xs-12 {
     width: 100%;
     height: 50vh; } }
-@media (max-height: 450px) and (orientation: landscape) {
+@media (max-height: 500px) and (orientation: landscape) {
   .col-xs-12 {
     width: 100%; } }
 * {
@@ -242,6 +242,13 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+@media (orientation: portrait) {
+  .center-p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); } }
 
 @media (min-width: 1230px) {
   .center-l {
@@ -532,8 +539,7 @@ header {
   position: relative; }
   @media (max-height: 500px) and (orientation: landscape) {
     #about {
-      height: 100% !important;
-      border: 10px solid greenyellow; } }
+      height: 100% !important; } }
   #about .row {
     padding: 0 5%; }
   #about h1 {
@@ -677,6 +683,9 @@ header {
   font-size: 1.5rem;
   line-height: 2rem;
   position: relative; }
+  @media (max-height: 500px) and (orientation: landscape) {
+    #code-piece-3 {
+      height: 500px !important; } }
   @media (max-width: 800px) {
     #code-piece-3 {
       font-size: 1.8rem;
@@ -913,8 +922,10 @@ header {
   position: relative; }
   @media (max-height: 500px) and (orientation: landscape) {
     .portfolio {
-      height: 100% !important;
-      border: 10px solid greenyellow; } }
+      height: 100% !important; } }
+  @media (max-height: 400px) and (orientation: landscape) {
+    .portfolio {
+      height: 550px !important; } }
   .portfolio span {
     font-size: 25rem;
     color: #7800ff;
@@ -931,6 +942,10 @@ header {
     .portfolio .col-6 {
       height: 100vh;
       position: relative; } }
+  @media (max-height: 500px) and (orientation: landscape) {
+    .portfolio .col-xs-12 {
+      height: 50vh;
+      position: relative; } }
   .portfolio .portfolio--color-gray {
     color: #7d777a; }
   .portfolio figure {
@@ -938,7 +953,11 @@ header {
     position: absolute; }
     @media (max-height: 500px) and (orientation: landscape) {
       .portfolio figure {
-        position: static; } }
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20rem; } }
     @media (max-width: 360px) {
       .portfolio figure {
         width: 20rem; } }
@@ -967,6 +986,9 @@ header {
         opacity: 0;
         transition: opacity 1s ease-in-out;
         cursor: pointer; }
+        @media (max-height: 500px) and (orientation: landscape) {
+          .portfolio figure .layer img {
+            width: 20rem; } }
         @media (max-width: 360px) {
           .portfolio figure .layer img {
             width: 20rem; } }
@@ -980,12 +1002,27 @@ header {
 #portfolio-2 {
   position: relative; }
   #portfolio-2 span {
-    position: absolute; }
+    position: absolute;
+    transform: translateY(-50%);
+    height: 300px; }
     #portfolio-2 span:first-of-type {
-      top: 25%; }
+      top: 50%; }
+      @media (max-width: 500px) {
+        #portfolio-2 span:first-of-type {
+          top: none;
+          transform: translateY(-140%); } }
+      @media (max-width: 500px) and (max-height: 550px) {
+        #portfolio-2 span:first-of-type {
+          transform: translateY(-110%); } }
     #portfolio-2 span:last-of-type {
-      bottom: '';
-      top: 25.5%; }
+      top: 50%; }
+      @media (max-width: 500px) {
+        #portfolio-2 span:last-of-type {
+          top: none;
+          transform: translateY(50%); } }
+      @media (max-width: 500px) and (max-height: 550px) {
+        #portfolio-2 span:last-of-type {
+          transform: translateY(15%); } }
 
 .figure--left {
   left: 35%;
@@ -1002,6 +1039,15 @@ header {
   @media (max-width: 500px) and (orientation: portrait) {
     .figure--left {
       left: 10%; } }
+  @media (max-height: 550px) and (orientation: portrait) {
+    .figure--left {
+      top: 5%; } }
+  @media (max-height: 500px) and (orientation: landscape) {
+    .figure--left {
+      top: 0; } }
+  @media (max-height: 400px) and (orientation: landscape) {
+    .figure--left {
+      top: 70% !important; } }
 
 .figure--right {
   bottom: 15%;
@@ -1018,6 +1064,15 @@ header {
   @media (max-width: 500px) and (orientation: portrait) {
     .figure--right {
       right: 10%; } }
+  @media (max-height: 550px) and (orientation: portrait) {
+    .figure--right {
+      bottom: 5%; } }
+  @media (max-height: 500px) and (orientation: landscape) {
+    .figure--right {
+      bottom: -35%; } }
+  @media (max-height: 400px) and (orientation: landscape) {
+    .figure--right {
+      bottom: 50% !important; } }
 
 .figure--center {
   margin: 0 !important; }

@@ -80,6 +80,9 @@
   font-size: 1.5rem;
   line-height: 2rem;
   position: relative;
+  @media (max-height: 500px) and (orientation: landscape) {
+    height: 500px !important;
+  }
   @media (max-width: 800px) {
     font-size: 1.8rem;
     line-height: 2.6rem;
