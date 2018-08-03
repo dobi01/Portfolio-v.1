@@ -10,12 +10,14 @@
  * Requires: 1.2.2+
  */
 
+// Modified by Dobi Okrasa
+
 (function($) {
 
   var types = ['DOMMouseScroll', 'mousewheel'];
   
   if ($.event.fixHooks) {
-      for ( var i=types.length; i; ) {
+      for ( var i = types.length; i; ) {
           $.event.fixHooks[ types[--i] ] = $.event.mouseHooks;
       }
   }
@@ -23,7 +25,7 @@
   $.event.special.mousewheel = {
       setup: function() {
           if ( this.addEventListener ) {
-              for ( var i=types.length; i; ) {
+              for ( var i = types.length; i; ) {
                   this.addEventListener( types[--i], handler, false );
               }
           } else {
@@ -33,7 +35,7 @@
       
       teardown: function() {
           if ( this.removeEventListener ) {
-              for ( var i=types.length; i; ) {
+              for ( var i = types.length; i; ) {
                   this.removeEventListener( types[--i], handler, false );
               }
           } else {
@@ -85,49 +87,44 @@
   
     
   // OUR CODE
-  
-  // var winH = $(window).height();
-  // $('.page').height(winH);
-  
+   
   var c = 0;
   var pagesN = $('.page').length;
   
   function adjustCurrent(){
-      if(c===-1){
-          c=0;
-      }else if(c===pagesN){
-          c=pagesN-1;
+      if (c === -1) {
+          c = 0;
+      } else if (c === pagesN) {
+          c = pagesN - 1;
       }    
   }
   
   var pauseWheel = false; // ADDED THIS 'FLAG' TO PREVENT SCROLLS WHILE ANIMATING
   
-  function scrollPage(){
+  function scrollPage() {
       adjustCurrent(); 
       var pagePos = $('.page').eq(c).position().top;    
-      $('html, body').stop().animate({scrollTop: pagePos},{
+      $('html, body').stop().animate({scrollTop: pagePos}, {
           easing: 'easeOutSine',
           duration: 800,
-          complete: function(){
-              pauseWheel=false; // WHEN ANIMATION IS OVER RESET TO false
+          complete: function() {
+              pauseWheel = false; // WHEN ANIMATION IS OVER RESET TO false
           }
       });
   }
-  var activePage=0;
+  var activePage = 0;
   $(document).bind('mousewheel', function(ev, delta) {
-      if (pauseWheel===false){ // ONLY IF FLAG IS FALSE
-          pauseWheel=true;    // SET MOMENTALLY TO TRUE
-          delta>0 ? c-- : c++ ;
-          activePage=c;
-          console.log(c);
+      if (pauseWheel === false) { // ONLY IF FLAG IS FALSE
+          pauseWheel = true;    // SET MOMENTALLY TO TRUE
+          delta > 0 ? c-- : c++;
+          activePage = c;
           scrollPage();       // LOOK WHAT HAPPENS WITH OUR FLAG IN THIS fn
-          console.log(c);
           return false;
       }        
   });
   
   // Modified by Dobi Okrasa
-  $(document).bind('keyup', function(event){
+  $(document).bind('keyup', function(event) {
       const key = event.which;
 
       switch (key) {
