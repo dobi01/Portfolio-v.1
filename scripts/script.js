@@ -38,7 +38,7 @@
     }
 
     let touchDevice = isMobile(),
-        winH = $(window).height(),
+        windowHeight = $(window).height(),
         // navLinkToAbout = $('#nav-link-to-About'),
         // navLinkToPortfolio = $('#nav-link-to-Portfolio'),
         sectionAbout = $('#about'),
@@ -47,14 +47,18 @@
 
     navLinks.click(function() {
       c = $(this).data('page-number');
-      let id = $(this).attr('id');
       if (touchDevice) {
+
+        let id = $(this).attr('id');
+            // offsetAbout = windowHeight - heightSectionAbout,
+            // offsetPortfolio = windowHeight - heightSectionPortfolio;
+
         switch (id) {
           case 'nav-link-to-About':
-            scrollFlow(sectionAbout, (winH - heightSectionAbout));
+            scrollFlow(sectionAbout, windowHeight);
             break;
           case 'nav-link-to-Portfolio':
-            scrollFlow(sectionPortfolio, (winH - heightSectionPortfolio));
+            scrollFlow(sectionPortfolio, windowHeight);
             break;
         }
       }
