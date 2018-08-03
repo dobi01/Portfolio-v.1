@@ -20,7 +20,7 @@
         }, 700, 'linear');
     }
 
-    linkToPortfolio.click(function() {
+    linkToPortfolio.on('click touch', function () {
       c = $(this).data('page-number');
       scrollFlow(sectionPortfolio);
     });
@@ -30,39 +30,8 @@
       doc.scrollTop('#header');
     });
 
-
-    // Scroll fix for touch devices
-    function isMobile() {
-      try { document.createEvent("TouchEvent"); return true; }
-      catch(e) { return false; }
-    }
-
-    let touchDevice = isMobile(),
-        // windowHeight = $(window).height(),
-        // // navLinkToAbout = $('#nav-link-to-About'),
-        // // navLinkToPortfolio = $('#nav-link-to-Portfolio'),
-        sectionAbout = $('#about');
-        // heightSectionAbout = 700,
-        // heightSectionPortfolio = 550;
-
-    navLinks.click(function() {
+    navLinks.on('click touch', function () {
       c = $(this).data('page-number');
-      if (touchDevice) {
-
-        let id = $(this).attr('id');
-            // offsetAbout = windowHeight - heightSectionAbout,
-            // offsetPortfolio = windowHeight - heightSectionPortfolio;
-
-        switch (id) {
-          case 'nav-link-to-About':
-            scrollFlow(sectionAbout);
-            break;
-          case 'nav-link-to-Portfolio':
-            scrollFlow(sectionPortfolio, 300);
-            break;
-        }
-      }
-
       showMenu();
     });
 
