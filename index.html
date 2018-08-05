@@ -1,11 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Dobi Okrasa portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-  <link rel="stylesheet" media="screen" href="style/style.css" />
+  <meta name="theme-color" content="#352B2F">
+  <meta name="author" content="Dobi Okrasa">
+  <meta name="copyright" content="Dobi Okrasa">
+  <meta name="description" content="Dobi Okrasa portfolio - junior front-end developer">
+  <meta name="keywords" content="junior front-end developer, portfolio, Dobi Okrasa, recruitment, web development, HTML, CSS, JavaScript">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Offside">
+  <link rel="stylesheet" media="screen" href="style/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 </head>
 <body>
@@ -20,11 +26,9 @@
     </div>
   </nav>
   <header id="header" class="page">
-    <button><i class="far fa-circle"></i></button>
+    <button aria-label="menu"><i class="far fa-circle"></i></button>
     <div class="row">
-      <div class="col-5">
-        <img src="img/portret4.png" alt="portrait picture of webpage author">
-      </div>
+      <div class="col-5"></div>
       <div class="col-7 col-p-12">
         <h1 class="center">
           <span>Hi, I'm Dobi</span>
@@ -37,7 +41,14 @@
     </div>
     <div class="row portrait-mode-only">
       <div class="col-p-12">
-        <img src="img/portret4.png" alt="portrait picture of webpage author">
+        <img srcset="img/portret-small-326.png 326w,
+                    img/portret-small-434.png 434w,
+                    img/portret-medium-543.png 543w,
+                    img/portret-medium-760.png 760w,
+                    img/portret-large-1086.png 1086w"
+             sizes="(orientation: portrait) 50vh" 
+             src="img/portret-large-1086.png"
+             alt="portrait picture of webpage author">
       </div>
     </div>
   </header>
@@ -107,9 +118,14 @@
               <h2>PSD to webpage cut</h2>
             </figcaption>
             <div class="layer">
-              <img src="img/project_1.png" alt="webpage miniature">
+              <img srcset="img/project_1-large-741.jpg 741w,
+                           img/project_1-medium-444.jpg 444w,
+                           img/project_1-small-296.jpg 296w"
+                   sizes="50vw" 
+                   src="img/project_1-large-741.jpg" 
+                   alt="webpage miniature">
             </div>
-            <a href="">>> view source code</a>
+            <a href="" target="_blank" rel="noopener">>> view source code</a>
           </figure>
         </div>
         <div class="col-6 col-xs-12">
@@ -119,9 +135,14 @@
               <h2>PSD to webpage cut</h2>
             </figcaption>
             <div class="layer">
-              <img src="img/project_1.png" alt="webpage miniature">
+              <img srcset="img/project_1-large-741.jpg 741w,
+                          img/project_1-medium-444.jpg 444w,
+                          img/project_1-small-296.jpg 296w"
+                  sizes="50vw" 
+                  src="img/project_1-large-741.jpg" 
+                  alt="webpage miniature">
             </div>
-            <a href="">>> view source code</a>
+            <a href="" target="_blank" rel="noopener">>> view source code</a>
           </figure>
         </div>
       </div>
@@ -142,9 +163,14 @@
               <h2>PSD to webpage cut</h2>
             </figcaption>
             <div class="layer">
-              <img src="img/project_1.png" alt="webpage miniature">
+              <img srcset="img/project_1-large-741.jpg 741w,
+                           img/project_1-medium-444.jpg 444w,
+                           img/project_1-small-296.jpg 296w"
+                   sizes="50vw" 
+                   src="img/project_1-large-741.jpg" 
+                   alt="webpage miniature">
             </div>
-            <a href="">>> view source code</a>
+            <a href="" target="_blank" rel="noopener">>> view source code</a>
           </figure>
         </div>
         <div class="col-6 col-xs-12">
@@ -154,9 +180,14 @@
               <h2>PSD to webpage cut</h2>
             </figcaption>
             <div class="layer">
-              <img src="img/project_1.png" alt="webpage miniature">
+              <img srcset="img/project_1-large-741.jpg 741w,
+                           img/project_1-medium-444.jpg 444w,
+                           img/project_1-small-296.jpg 296w"
+                   sizes="50vw" 
+                   src="img/project_1-large-741.jpg" 
+                   alt="webpage miniature">
             </div>
-            <a href="">>> view source code</a>
+            <a href="" target="_blank" rel="noopener">>> view source code</a>
           </figure>
         </div>
       </div>
@@ -178,9 +209,14 @@
               <h2>PSD to webpage cut</h2>
             </figcaption>
             <div class="layer">
-              <img src="img/project_1.png" alt="webpage miniature">
+              <img srcset="img/project_1-large-741.jpg 741w,
+                           img/project_1-medium-444.jpg 444w,
+                           img/project_1-small-296.jpg 296w"
+                   sizes="50vw" 
+                   src="img/project_1-large-741.jpg" 
+                   alt="webpage miniature">
             </div>
-            <a href="">>> view source code</a>
+            <a href="" target="_blank" rel="noopener">>> view source code</a>
           </figure>
         </div>
       </div>
@@ -263,15 +299,87 @@
     </div>
   </section>
   <section id="code-piece-5" class="page">
-    <img id="img-1" src="img/portret4.png" alt="portrait picture of webpage author">
-    <img id="img-2" src="img/portret4.png" alt="">
-    <img id="img-3" src="img/portret4.png" alt="">
-    <img id="img-4" src="img/portret4.png" alt="">
-    <img id="img-5" src="img/portret4.png" alt="">
-    <img id="img-6" src="img/portret4.png" alt="">
-    <img id="img-7" src="img/portret4.png" alt="">
-    <img id="img-8" src="img/portret4.png" alt="">
-    <img id="img-9" src="img/portret4.png" alt="">
+    <img id="img-1"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-2"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-3"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-4"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-5"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-6"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-7"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-8"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
+    <img id="img-9"
+         srcset="img/portret-small-326.png 326w,
+                img/portret-small-434.png 434w,
+                img/portret-medium-543.png 543w,
+                img/portret-medium-760.png 760w,
+                img/portret-large-1086.png 1086w"
+         sizes="(orientation: portrait) 50vh" 
+         src="img/portret-large-1086.png"
+         alt="portrait picture of webpage author">
     <div>
       <p>&#60;div id="dobi"</p>
       <p>class="multiplying-</p>
@@ -307,10 +415,10 @@
       </p>
       <p>881 479 759</p>
       <p>
-        <a href="https://www.linkedin.com/in/dobi-okrasa/" target="_blank">
+        <a href="https://www.linkedin.com/in/dobi-okrasa/" target="_blank" rel="noopener" aria-label="link to my profile on LinkedIn">
           <i class="fab fa-linkedin"></i>
         </a>
-        <a href="https://github.com/dobi01" target="_blank">
+        <a href="https://github.com/dobi01" target="_blank" rel="noopener" aria-label="link to my profile on GitHub">
           <i class="fab fa-github"></i>
         </a>
       </p>

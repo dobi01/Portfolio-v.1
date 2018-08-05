@@ -33,38 +33,41 @@ header {
     @media (orientation: portrait) {
       display: block;
       height: 50vh;
+      position: relative;
     }
     img {
       @media (orientation: portrait) {
-        height: 50vh;
+        height: auto;
         margin: 0 auto;
         display: block;
-        text-align: center;
+        max-width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0;
       }
     }
   }
   .col-5 {
     @media (orientation: landscape) {
-      background: url('../img/portret4.png') no-repeat right / cover;
+      background: url('img/portret-small-326.png') no-repeat right / cover;
+      @media (min-width: 326px), (min-height: 317px) {
+        background: url('img/portret-small-434.png') no-repeat right / cover;
+      }
+      @media (min-width: 434px), (min-height: 422px) {
+        background: url('../img/portret-medium-543.png') no-repeat right / cover;
+      }
+      @media (min-width: 543px), (min-height: 528px) {
+        background: url('../img/portret-medium-760.png') no-repeat right / cover;
+      }
+      @media (min-width: 761px), (min-height: 740px) {
+        background: url('../img/portret-large-1086.png') no-repeat right / cover;
+      }
       margin-top: 5vh;
       height: 95vh;
     }
     @media (orientation: portrait) {
       display: none;
-    }
-    @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
-      background-image: none;
-    }
-    img {
-      margin-top: 5vh;
-      height: 95vh;
-      @media (orientation: landscape),
-      (orientation: portrait) {
-        display: none;
-      }
-      @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
-        display: inline;
-      }
     }
   }
   .col-7 {
@@ -205,10 +208,4 @@ header {
       }
     }
   }
-}
-
-@keyframes img-multiplying-0 {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
 }

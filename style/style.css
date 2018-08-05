@@ -1,4 +1,3 @@
-@import url(https://fonts.googleapis.com/css?family=Offside);
 *, *:after, *:before {
   box-sizing: border-box;
   margin: 0;
@@ -31,7 +30,7 @@ nav,
 section {
   display: block; }
 
-.row:after {
+.row::after {
   content: "";
   display: table;
   clear: both; }
@@ -223,15 +222,15 @@ html {
   background-color: #fff;
   font-size: 100%;
   overflow-x: hidden; }
-  @media (min-width: 2000px) {
-    html {
-      font-size: 130%; } }
-  @media (min-width: 1800px) {
-    html {
-      font-size: 110%; } }
   @media (min-width: 1160px) and (max-width: 1500px) {
     html {
       font-size: 90%; } }
+  @media (min-width: 1800px) {
+    html {
+      font-size: 110%; } }
+  @media (min-width: 2000px) {
+    html {
+      font-size: 130%; } }
   @media (max-width: 1160px) {
     html {
       font-size: 80%; } }
@@ -367,33 +366,39 @@ header {
     @media (orientation: portrait) {
       header .portrait-mode-only {
         display: block;
-        height: 50vh; } }
+        height: 50vh;
+        position: relative; } }
     @media (orientation: portrait) {
       header .portrait-mode-only img {
-        height: 50vh;
+        height: auto;
         margin: 0 auto;
         display: block;
-        text-align: center; } }
+        max-width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        left: 0; } }
   @media (orientation: landscape) {
     header .col-5 {
-      background: url("../img/portret4.png") no-repeat right/cover;
+      background: url("img/portret-small-326.png") no-repeat right/cover;
       margin-top: 5vh;
       height: 95vh; } }
+  @media (orientation: landscape) and (min-width: 326px), (orientation: landscape) and (min-height: 317px) {
+    header .col-5 {
+      background: url("img/portret-small-434.png") no-repeat right/cover; } }
+  @media (orientation: landscape) and (min-width: 434px), (orientation: landscape) and (min-height: 422px) {
+    header .col-5 {
+      background: url("../img/portret-medium-543.png") no-repeat right/cover; } }
+  @media (orientation: landscape) and (min-width: 543px), (orientation: landscape) and (min-height: 528px) {
+    header .col-5 {
+      background: url("../img/portret-medium-760.png") no-repeat right/cover; } }
+  @media (orientation: landscape) and (min-width: 761px), (orientation: landscape) and (min-height: 740px) {
+    header .col-5 {
+      background: url("../img/portret-large-1086.png") no-repeat right/cover; } }
+
   @media (orientation: portrait) {
     header .col-5 {
       display: none; } }
-  @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
-    header .col-5 {
-      background-image: none; } }
-  header .col-5 img {
-    margin-top: 5vh;
-    height: 95vh; }
-    @media (orientation: landscape), (orientation: portrait) {
-      header .col-5 img {
-        display: none; } }
-    @media (max-height: 480px) and (min-width: 780px) and (orientation: landscape) {
-      header .col-5 img {
-        display: inline; } }
   header .col-7 {
     position: relative;
     height: 100vh; }
@@ -523,13 +528,6 @@ header {
             header .col-7 h1 span:nth-of-type(5) {
               padding-right: 6rem; } }
 
-@keyframes img-multiplying-0 {
-  0% {
-    opacity: 1; }
-  50% {
-    opacity: 0; }
-  100% {
-    opacity: 1; } }
 #about {
   position: relative; }
   @media (max-height: 500px) and (orientation: landscape) {
@@ -790,6 +788,13 @@ header {
     left: 70%;
     animation: img-multiplying-7 5s linear infinite; }
 
+@keyframes img-multiplying-0 {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 @keyframes img-multiplying-6 {
   0% {
     opacity: 1; }
