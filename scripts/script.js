@@ -1,16 +1,26 @@
 (function($){
   $(window).on("load",function(){
 
+    // Touch device detection
+    function isMobile() {
+      try { document.createEvent("TouchEvent"); return true; }
+      catch(e) { return false; }
+    }
+    
+    let touchDevice = isMobile();
+
     // Navigation
     const menuButton = $('button'),
           docToHideAndShow = $('nav, button, header, section, address'),
-          navLinks = $('nav a'),
+          bodyWithoutNav = $('button, header, section, address'),
+          nav = $('nav'),
+          navLinks = nav.find('a'),
           doc = $('html, body'),
           sectionPortfolio = $('#portfolio-0'),
           linkToPortfolio = $('#about a');
 
-    function showMenu() {
-      docToHideAndShow.fadeToggle(700, 'linear');
+    function showMenu(section) {
+      section.fadeToggle(700, 'linear');
     }
 
     function scrollFlow(section, margin) {
@@ -26,13 +36,20 @@
     });
 
     menuButton.click(function() {
-      showMenu();
+      showMenu(docToHideAndShow);
       doc.scrollTop('#header');
     });
 
     navLinks.on('click touch', function () {
       c = $(this).data('page-number');
-      showMenu();
+      showMenu(nav);
+      showMenu(bodyWithoutNav);
+      // if (touchDevice) {
+      //   showMenu(nav);
+      //   showMenu(bodyWithoutNav);
+      // } else {
+      //   showMenu(docToHideAndShow);
+      // }
     });
 
     // Portfolio section animate
