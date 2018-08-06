@@ -1,6 +1,56 @@
 (function($){
   $(window).on("load",function(){
 
+    // Add a class when the target(s) is in the viewport
+    // Based on https://gist.github.com/eltonmesquita/96065060e7be48b5ca6546454cb9d1be
+    function onViewport(el, elClass, offset) {
+      /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
+      let didScroll = false,
+          this_top,
+          top;
+        
+      $(window).scroll(function() {
+        didScroll = true;
+      });
+     
+      setInterval(function() {
+        if (didScroll) {
+          didScroll = false;
+          top = $(this).scrollTop();
+     
+          $(el).each(function(i) {
+            if (!offset) { offset = $(this).height(); }
+            this_top = $(this).offset().top - offset;
+     
+            // Scrolled within current section
+            if (top >= this_top && !$(this).hasClass(elClass)) {
+              $(this).addClass(elClass);
+            }
+          });
+        }
+      }, 100);
+    }
+
+    let viewportHeight = $(window).height(),
+        figures = $('figure');
+    const windowMaxHeight500pxLandscape = window.matchMedia("(max-height: 500px) and (orientation: landscape)");
+
+    $('header').addClass('animated fadeIn slow');
+    onViewport('.fade-in-section', 'visible animated fadeIn slow', 500);
+
+    function mediaQuery500px(x) {
+      if (x.matches) {
+        figures.addClass('visible');
+      } else {
+        onViewport('.figure--left', 'visible animated fadeInLeft', viewportHeight);
+        onViewport('.figure--right', 'visible animated fadeInRight', viewportHeight);
+        onViewport('.figure--center', 'visible animated fadeIn', viewportHeight);
+      }
+    }
+
+    windowMaxHeight500pxLandscape.addListener(mediaQuery500px);
+    mediaQuery500px(windowMaxHeight500pxLandscape);
+
     // Touch device detection
     function isMobile() {
       try { document.createEvent("TouchEvent"); return true; }

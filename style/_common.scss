@@ -51,6 +51,7 @@ html {
 
 section {
   height: 100vh;
+  visibility: hidden;
 }
 
 .center {
@@ -82,4 +83,60 @@ section {
 
 .center-m {
   margin: 0 auto;
+}
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  animation-name: fadeInLeft;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInRight {
+  animation-name: fadeInRight;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+}
+
+.animated.slow {
+  animation-duration: 2s;
+}
+
+.visible {
+  visibility: visible !important;
 }

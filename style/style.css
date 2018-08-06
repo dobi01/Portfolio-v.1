@@ -242,7 +242,8 @@ html {
       font-size: 60%; } }
 
 section {
-  height: 100vh; }
+  height: 100vh;
+  visibility: hidden; }
 
 .center {
   position: absolute;
@@ -268,6 +269,44 @@ section {
 
 .center-m {
   margin: 0 auto; }
+
+.animated {
+  animation-duration: 1s;
+  animation-fill-mode: both; }
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translate3d(-100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+.fadeInLeft {
+  animation-name: fadeInLeft; }
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translate3d(100%, 0, 0); }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0); } }
+.fadeInRight {
+  animation-name: fadeInRight; }
+
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+.fadeIn {
+  animation-name: fadeIn; }
+
+.animated.slow {
+  animation-duration: 2s; }
+
+.visible {
+  visibility: visible !important; }
 
 nav {
   height: 100vh;
@@ -722,6 +761,7 @@ header {
       font-size: 2rem; } }
 
 #code-piece-5 {
+  visibility: visible;
   font-size: 6.5rem;
   position: relative;
   background: #FF006B;
@@ -742,6 +782,7 @@ header {
     #code-piece-5 {
       font-size: 4rem; } }
   #code-piece-5 div {
+    visibility: hidden;
     position: absolute;
     bottom: 5%;
     padding-top: 30vh;
@@ -950,6 +991,7 @@ header {
     .portfolio {
       height: 550px !important; } }
   .portfolio span {
+    visibility: visible;
     font-size: 25rem;
     color: #7800ff;
     position: absolute; }
@@ -973,7 +1015,8 @@ header {
     color: #7d777a; }
   .portfolio figure {
     width: 25rem;
-    position: absolute; }
+    position: absolute;
+    visibility: hidden; }
     @media (max-height: 500px) and (orientation: landscape) {
       .portfolio figure {
         position: absolute;
@@ -1104,7 +1147,8 @@ address {
   height: 100vh;
   font-style: normal;
   text-align: center;
-  position: relative; }
+  position: relative;
+  visibility: hidden; }
   address p {
     font-size: 2rem;
     padding-bottom: .5rem; }

@@ -125,6 +125,7 @@
 }
 
 #code-piece-5 {
+  visibility: visible;
   font-size: 6.5rem;
   position: relative;
   background: #FF006B;
@@ -145,6 +146,7 @@
     font-size: 4rem;
   }
   div {
+    visibility: hidden;
     position: absolute;
     bottom: 5%;
     padding-top: 30vh;
