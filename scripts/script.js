@@ -1,7 +1,7 @@
 (function($){
   $(window).on("load",function(){
 
-    // Add a class when the target(s) is in the viewport
+    // Add a class when the target is in the viewport
     // Based on https://gist.github.com/eltonmesquita/96065060e7be48b5ca6546454cb9d1be
     function onViewport(el, elClass, offset) {
       /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
