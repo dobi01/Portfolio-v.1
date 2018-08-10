@@ -35,7 +35,7 @@
         figures = $('figure');
     const windowMaxHeight500pxLandscape = window.matchMedia("(max-height: 500px) and (orientation: landscape)");
 
-    $('header').addClass('animated fadeIn slow');
+    // $('header').addClass('animated fadeIn slow');
     onViewport('.fade-in-section', 'visible animated fadeIn slow', 500);
 
     function mediaQuery500px(x) {
@@ -80,7 +80,7 @@
         }, 700, 'linear');
     }
 
-    linkToPortfolio.on('click touch', function () {
+    linkToPortfolio.on('click touchend', function () {
       c = $(this).data('page-number');
       scrollFlow(sectionPortfolio);
     });
@@ -90,7 +90,7 @@
       doc.scrollTop('#header');
     });
 
-    navLinks.on('click touch', function () {
+    navLinks.on('click touchend', function () {
       c = $(this).data('page-number');
       showMenu(nav);
       showMenu(bodyWithoutNav);
