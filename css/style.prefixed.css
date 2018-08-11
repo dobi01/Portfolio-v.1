@@ -110,6 +110,10 @@ html { background-color: #fff; font-size: 100%; overflow-x: hidden; }
 
 @media (max-width: 800px) { html { font-size: 60%; } }
 
+body { opacity: 1; transition: .8s opacity; overflow: hidden; }
+
+body.fade-out { opacity: 0; background: #fff; transition: none; }
+
 section { height: 100vh; visibility: hidden; }
 
 .center { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); }

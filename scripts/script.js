@@ -1,3 +1,8 @@
+/*jshint esversion: 6 */
+$(function () {
+  $('body').removeClass('fade-out');
+});
+
 (function($){
   $(window).on("load",function(){
 
@@ -5,29 +10,21 @@
     // Based on https://gist.github.com/eltonmesquita/96065060e7be48b5ca6546454cb9d1be
     function onViewport(el, elClass, offset) {
       /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
-      let didScroll = false,
-          this_top,
+      let this_top,
           top;
-        
-      $(window).scroll(function() {
-        didScroll = true;
-      });
      
       setInterval(function() {
-        if (didScroll) {
-          didScroll = false;
-          top = $(this).scrollTop();
-     
-          $(el).each(function(i) {
-            if (!offset) { offset = $(this).height(); }
-            this_top = $(this).offset().top - offset;
-     
-            // Scrolled within current section
-            if (top >= this_top && !$(this).hasClass(elClass)) {
-              $(this).addClass(elClass);
-            }
-          });
-        }
+        top = $(this).scrollTop();
+    
+        $(el).each(function(i) {
+          if (!offset) { offset = $(this).height(); }
+          this_top = $(this).offset().top - offset;
+    
+          // Scrolled within current section
+          if (top >= this_top && !$(this).hasClass(elClass)) {
+            $(this).addClass(elClass);
+          }
+        });
       }, 100);
     }
 
@@ -38,7 +35,7 @@
     // $('header').addClass('animated fadeIn slow');
     onViewport('.fade-in-section', 'visible animated fadeIn slow', 500);
 
-    function mediaQuery500px(x) {
+    function mediaQueryMaxHeight500pxLandscape(x) {
       if (x.matches) {
         figures.addClass('visible');
       } else {
@@ -48,8 +45,8 @@
       }
     }
 
-    windowMaxHeight500pxLandscape.addListener(mediaQuery500px);
-    mediaQuery500px(windowMaxHeight500pxLandscape);
+    windowMaxHeight500pxLandscape.addListener(mediaQueryMaxHeight500pxLandscape);
+    mediaQueryMaxHeight500pxLandscape(windowMaxHeight500pxLandscape);
 
     // Touch device detection
     function isMobile() {
@@ -62,11 +59,12 @@
     // Navigation
     const menuButton = $('button'),
           docToHideAndShow = $('nav, button, header, section, address'),
-          bodyWithoutNav = $('button, header, section, address'),
+          // bodyWithoutNav = $('button, header, section, address'),
           nav = $('nav'),
           navLinks = nav.find('a'),
           doc = $('html, body'),
           sectionPortfolio = $('#portfolio-0'),
+          sectionAbout = $('#about'),
           linkToPortfolio = $('#about a');
 
     function showMenu(section) {
@@ -80,26 +78,37 @@
         }, 700, 'linear');
     }
 
-    linkToPortfolio.on('click touchend', function () {
-      c = $(this).data('page-number');
+    linkToPortfolio.on('click', function () {
+      c = $(this).data('page-number'); // to get smooth scroll by mousewheel and keyboard
       scrollFlow(sectionPortfolio);
     });
 
     menuButton.click(function() {
       showMenu(docToHideAndShow);
-      doc.scrollTop('#header');
+      doc.scrollTop('#header'); // to get nice fadein effect of nav section
     });
 
-    navLinks.on('click touchend', function () {
+    navLinks.on('click', function () {
       c = $(this).data('page-number');
-      showMenu(nav);
-      showMenu(bodyWithoutNav);
-      // if (touchDevice) {
-      //   showMenu(nav);
-      //   showMenu(bodyWithoutNav);
-      // } else {
-      //   showMenu(docToHideAndShow);
-      // }
+
+      if (c == 12) { // if user clicked on link to Contact section
+        showMenu(docToHideAndShow);
+      } else {
+        if ((navigator.userAgent.search("Firefox") >= 0) ||
+           (navigator.userAgent.search("MSIE") >= 0) ||
+           (navigator.userAgent.search("Edge") >= 0)
+          // || (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+          ) {              
+          showMenu(docToHideAndShow);
+          if (c == 1) { // if user clicked on link to About section
+            scrollFlow(sectionAbout, viewportHeight);
+          } else if (c == 3) { // if user clicked on link to Portfolio section
+            scrollFlow(sectionPortfolio, viewportHeight);
+          }
+        } else {
+          showMenu(docToHideAndShow);
+        }
+      }
     });
 
     // Portfolio section animate
@@ -110,7 +119,7 @@
     function turnGray() {
       portfolioElem.stop(true, true)
                    .toggleClass('portfolio--color-gray', 500);
-    };
+    }
 
     portfolioLayer.hover(turnGray, turnGray);
 
@@ -119,7 +128,7 @@
         orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
 
     window.addEventListener(orientationEvent, function() {
-      window.location.reload()
+      window.location.reload();
     }, false); 
 
   });

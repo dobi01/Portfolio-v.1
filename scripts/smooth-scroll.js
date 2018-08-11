@@ -1,3 +1,5 @@
+/*jshint esversion: 6 */
+
 /*! Copyright (c) 2011 Brandon Aaron (http://brandonaaron.net)
  * Licensed under the MIT License (LICENSE.txt).
  *
@@ -116,7 +118,11 @@
   $(document).bind('mousewheel', function(ev, delta) {
       if (pauseWheel === false) { // ONLY IF FLAG IS FALSE
           pauseWheel = true;    // SET MOMENTALLY TO TRUE
-          delta > 0 ? c-- : c++;
+          if (delta > 0) {
+            c--;
+          } else {
+            c++;
+          }
           activePage = c;
           scrollPage();       // LOOK WHAT HAPPENS WITH OUR FLAG IN THIS fn
           return false;

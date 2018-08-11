@@ -12,12 +12,13 @@
     "build": "npm-run-all build:* && npm run test",
     "build:rimraf": "rimraf css/*",
     "build:sass": "node-sass --output-style compact sass/style.scss css/style.css",
-    "build:autoprefixer": "autoprefixer-cli css/style.css",
+    "build:autoprefixer": "autoprefixer-cli -o css/style.prefixed.css css/style.css",
     "build-dev:sass": "node-sass --output-style expanded sass/style.scss css/style.css --source-map true",
     
     "watch": "npm-run-all build:* && run-p watch:*",
-    "watch:sassprefixer": "onchange sass/*.scss -- npm run build-dev:sass && npm run build:autoprefixer",
-    "watch:browser-sync": "browser-sync start --server --files \"css/style.prefixed.css\" \"*.html\" \"scripts/*.js\" ",
+    "watch:sass": "onchange sass/*.scss -- npm run build-dev:sass",
+    "watch:autoprefixer": "onchange css/*.css -- autoprefixer-cli -o css/style.prefixed.css css/style.css",
+    "watch:browser-sync": "browser-sync start --server --files \"css/style.css\" \"*.html\" \"scripts/*.js\" ",
     
     "test": "npm-run-all test:*",
     "test:html": "globstar nu-html-checker *.html",
