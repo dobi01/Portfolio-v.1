@@ -131,7 +131,7 @@
   
   // Modified by Dobi Okrasa
   $(document).bind('keyup', function(event) {
-      const key = event.which;
+      var key = event.which;
 
       switch (key) {
           case 40:

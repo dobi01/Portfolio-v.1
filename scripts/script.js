@@ -1,16 +1,14 @@
 /*jshint esversion: 6 */
-$(function () {
-  $('body').removeClass('fade-out');
-});
-
 (function($){
   $(window).on("load",function(){
+
+    $('body').removeClass('fade-out');
 
     // Add a class when the target is in the viewport
     // Based on https://gist.github.com/eltonmesquita/96065060e7be48b5ca6546454cb9d1be
     function onViewport(el, elClass, offset) {
       /*** Based on http://ejohn.org/blog/learning-from-twitter/ ***/
-      let this_top,
+      var this_top,
           top;
      
       setInterval(function() {
@@ -28,9 +26,9 @@ $(function () {
       }, 100);
     }
 
-    let viewportHeight = $(window).height(),
-        figures = $('figure');
-    const windowMaxHeight500pxLandscape = window.matchMedia("(max-height: 500px) and (orientation: landscape)");
+    var viewportHeight = $(window).height(),
+        figures = $('figure'),
+        windowMaxHeight500pxLandscape = window.matchMedia("(max-height: 500px) and (orientation: landscape)");
 
     // $('header').addClass('animated fadeIn slow');
     onViewport('.fade-in-section', 'visible animated fadeIn slow', 500);
@@ -54,18 +52,16 @@ $(function () {
       catch(e) { return false; }
     }
     
-    let touchDevice = isMobile();
+    var touchDevice = isMobile();
 
     // Navigation
-    const menuButton = $('button'),
-          docToHideAndShow = $('nav, button, header, section, address'),
-          // bodyWithoutNav = $('button, header, section, address'),
-          nav = $('nav'),
-          navLinks = nav.find('a'),
-          doc = $('html, body'),
-          sectionPortfolio = $('#portfolio-0'),
-          sectionAbout = $('#about'),
-          linkToPortfolio = $('#about a');
+    var menuButton = $('button'),
+        docToHideAndShow = $('nav, button, header, section, address'),
+        nav = $('nav'),
+        navLinks = nav.find('a'),
+        doc = $('html, body'),
+        sectionPortfolio = $('#portfolio-0'),
+        linkToPortfolio = $('#about a');
 
     function showMenu(section) {
       section.fadeToggle(700, 'linear');
@@ -91,30 +87,32 @@ $(function () {
     navLinks.on('click', function () {
       c = $(this).data('page-number');
 
-      if (c == 12) { // if user clicked on link to Contact section
-        showMenu(docToHideAndShow);
-      } else {
-        if ((navigator.userAgent.search("Firefox") >= 0) ||
-           (navigator.userAgent.search("MSIE") >= 0) ||
-           (navigator.userAgent.search("Edge") >= 0)
-          // || (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
-          ) {              
-          showMenu(docToHideAndShow);
-          if (c == 1) { // if user clicked on link to About section
-            scrollFlow(sectionAbout, viewportHeight);
-          } else if (c == 3) { // if user clicked on link to Portfolio section
-            scrollFlow(sectionPortfolio, viewportHeight);
-          }
-        } else {
-          showMenu(docToHideAndShow);
-        }
-      }
+      showMenu(docToHideAndShow);
+
+      // if (c == 12) { // if user clicked on link to Contact section
+      //   showMenu(docToHideAndShow);
+      // } else {
+      //   if ((navigator.userAgent.search("Firefox") >= 0) ||
+      //      (navigator.userAgent.search("MSIE") >= 0) ||
+      //      (navigator.userAgent.search("Edge") >= 0) ||
+      //      (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
+      //     ) {              
+      //     showMenu(docToHideAndShow);
+      //     if (c == 1) { // if user clicked on link to About section
+      //       scrollFlow(sectionAbout, viewportHeight);
+      //     } else if (c == 3) { // if user clicked on link to Portfolio section
+      //       scrollFlow(sectionPortfolio, viewportHeight);
+      //     }
+      //   } else {
+      //     showMenu(docToHideAndShow);
+      //   }
+      // }
     });
 
     // Portfolio section animate
-    const portfolio = $('.portfolio'),
-          portfolioElem = portfolio.find('span, h1, h2, a'),
-          portfolioLayer = portfolio.find('.layer');
+    var portfolio = $('.portfolio'),
+        portfolioElem = portfolio.find('span, h1, h2, a'),
+        portfolioLayer = portfolio.find('.layer');
 
     function turnGray() {
       portfolioElem.stop(true, true)
@@ -124,7 +122,7 @@ $(function () {
     portfolioLayer.hover(turnGray, turnGray);
 
     // Reload after orientation change
-    let supportsOrientationChange = "onorientationchange" in window,
+    var supportsOrientationChange = "onorientationchange" in window,
         orientationEvent = supportsOrientationChange ? "orientationchange" : "resize";
 
     window.addEventListener(orientationEvent, function() {
