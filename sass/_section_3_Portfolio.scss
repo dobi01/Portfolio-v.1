@@ -103,7 +103,8 @@
   span {
     position: absolute;
     transform: translateY(-50%);
-    height: 300px;
+    height: 50vh;
+    display: inline-block;
     &:first-of-type {
       top: 50%;
       @media (max-width: 500px) {

@@ -11,9 +11,10 @@ nav {
       font-size: 4rem;
       line-height: 100vh;
       z-index: 10;
-      transition: font-size .5s ease-in-out;
+      transition: color .5s ease-in-out;
+      
       &:hover {
-        font-size: 4.1rem;
+        color: $pink;
       }
       @media (max-width: 755px) and (orientation: portrait) {
         line-height: 33.33333vh;

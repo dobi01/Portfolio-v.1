@@ -13,6 +13,7 @@
  */
 
 // Modified by Dobi Okrasa
+var activePageNum = 0;
 
 (function($) {
 
@@ -90,14 +91,13 @@
     
   // OUR CODE
    
-  var c = 0;
   var pagesN = $('.page').length;
   
   function adjustCurrent(){
-      if (c === -1) {
-          c = 0;
-      } else if (c === pagesN) {
-          c = pagesN - 1;
+      if (activePageNum === -1) {
+          activePageNum = 0;
+      } else if (activePageNum === pagesN) {
+          activePageNum = pagesN - 1;
       }    
   }
   
@@ -105,7 +105,7 @@
   
   function scrollPage() {
       adjustCurrent(); 
-      var pagePos = $('.page').eq(c).position().top;    
+      var pagePos = $('.page').eq(activePageNum).position().top;    
       $('html, body').stop().animate({scrollTop: pagePos}, {
           easing: 'easeOutSine',
           duration: 800,
@@ -114,16 +114,16 @@
           }
       });
   }
-  var activePage = 0;
+
   $(document).bind('mousewheel', function(ev, delta) {
       if (pauseWheel === false) { // ONLY IF FLAG IS FALSE
           pauseWheel = true;    // SET MOMENTALLY TO TRUE
           if (delta > 0) {
-            c--;
+              activePageNum--;
           } else {
-            c++;
+              activePageNum++;
           }
-          activePage = c;
+
           scrollPage();       // LOOK WHAT HAPPENS WITH OUR FLAG IN THIS fn
           return false;
       }        
@@ -135,11 +135,11 @@
 
       switch (key) {
           case 40:
-              c++;
+              activePageNum++;
               scrollPage();
               break;
           case 38:
-              c--;
+              activePageNum--;
               scrollPage();
               break;
       }

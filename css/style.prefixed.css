@@ -153,9 +153,9 @@ nav { height: 100vh; position: relative; display: none; width: calc(100vw - 10px
 
 nav div { text-align: center; z-index: 10; }
 
-nav div a { position: relative; font-size: 4rem; line-height: 100vh; z-index: 10; transition: font-size .5s ease-in-out; }
+nav div a { position: relative; font-size: 4rem; line-height: 100vh; z-index: 10; transition: color .5s ease-in-out; }
 
-nav div a:hover { font-size: 4.1rem; }
+nav div a:hover { color: #ff006b; }
 
 @media (max-width: 755px) and (orientation: portrait) { nav div a { line-height: 33.33333vh; } }
 
@@ -321,11 +321,15 @@ header .col-7 h1 span:nth-of-type(5) { padding-left: 14rem; }
 
 #about div h2 { color: #1278f5; font-size: 1.23rem; padding: 3rem 0 0; }
 
+@media (min-width: 2200px) { #about div h2 { font-size: 1.6rem; } }
+
 @media (max-width: 1160px) { #about div h2 { font-size: 1.5rem; } }
 
 #about div ul { padding: 0 0; list-style-type: none; }
 
 #about div ul li { color: #7800ff; padding-top: .2rem; padding-left: .1rem; font-size: 1.1rem; line-height: 1.4rem; }
+
+@media (min-width: 2200px) { #about div ul li { font-size: 1.4rem; line-height: 1.8rem; } }
 
 @media (max-width: 1160px) { #about div ul li { font-size: 1.3rem; line-height: 1.6rem; } }
 
@@ -336,6 +340,10 @@ header .col-7 h1 span:nth-of-type(5) { padding-left: 14rem; }
 #about a { text-align: center; color: #7d777a; display: block; top: 90%; transition: all 1s ease-in-out; }
 
 #about a:hover { font-size: 1.1rem; }
+
+@media (min-width: 2200px) { #about a:hover { font-size: 1.4rem; } }
+
+@media (min-width: 2200px) { #about a { font-size: 1.3rem; } }
 
 @media (max-width: 1230px) { #about a { display: none; } }
 
@@ -382,7 +390,7 @@ header .col-7 h1 span:nth-of-type(5) { padding-left: 14rem; }
 
 @media (max-width: 350px) { #code-piece-2 p { font-size: 2.5rem; } }
 
-#code-piece-3 { font-size: 1.5rem; line-height: 2rem; position: relative; }
+#code-piece-3 { font-size: 1.5rem; line-height: 2.1rem; position: relative; }
 
 @media (max-height: 500px) and (orientation: landscape) { #code-piece-3 { height: 500px !important; } }
 
@@ -576,7 +584,7 @@ header .col-7 h1 span:nth-of-type(5) { padding-left: 14rem; }
 
 #portfolio-2 { position: relative; }
 
-#portfolio-2 span { position: absolute; transform: translateY(-50%); height: 300px; }
+#portfolio-2 span { position: absolute; transform: translateY(-50%); height: 50vh; display: inline-block; }
 
 #portfolio-2 span:first-of-type { top: 50%; }
 

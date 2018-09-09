@@ -1,3 +1,5 @@
+'use strict';
+
 /*jshint esversion: 6 */
 (function($){
   $(window).on("load",function(){
@@ -30,7 +32,6 @@
         figures = $('figure'),
         windowMaxHeight500pxLandscape = window.matchMedia("(max-height: 500px) and (orientation: landscape)");
 
-    // $('header').addClass('animated fadeIn slow');
     onViewport('.fade-in-section', 'visible animated fadeIn slow', 500);
 
     function mediaQueryMaxHeight500pxLandscape(x) {
@@ -61,6 +62,7 @@
         navLinks = nav.find('a'),
         doc = $('html, body'),
         sectionPortfolio = $('#portfolio-0'),
+        sectionAbout = $('#about'),
         linkToPortfolio = $('#about a');
 
     function showMenu(section) {
@@ -74,39 +76,40 @@
         }, 700, 'linear');
     }
 
-    linkToPortfolio.on('click', function () {
-      c = $(this).data('page-number'); // to get smooth scroll by mousewheel and keyboard
-      scrollFlow(sectionPortfolio);
+    linkToPortfolio.on('click', function() {
+      activePageNum = $(this).data('page-number'); // to get smooth scroll by mousewheel and keyboard
+      scrollFlow(sectionPortfolio);     
     });
 
-    menuButton.click(function() {
+    menuButton.on('click', function() {
       showMenu(docToHideAndShow);
       doc.scrollTop('#header'); // to get nice fadein effect of nav section
     });
 
-    navLinks.on('click', function () {
-      c = $(this).data('page-number');
+    var isOpera = (!!window.opr && !!opr.addons) || !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0,
+      isChrome = !!window.chrome && !!window.chrome.webstore,
+      isFirefox = typeof InstallTrigger !== 'undefined',
+      isSafari = /constructor/i.test(window.HTMLElement) || (function (p) { return p.toString() === "[object SafariRemoteNotification]"; })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification)),
+      isIE = /*@cc_on!@*/false || !!document.documentMode,
+      isEdge = !isIE && !!window.StyleMedia;
 
-      showMenu(docToHideAndShow);
+    navLinks.on('click', function() {
+      activePageNum = $(this).data('page-number');
 
-      // if (c == 12) { // if user clicked on link to Contact section
-      //   showMenu(docToHideAndShow);
-      // } else {
-      //   if ((navigator.userAgent.search("Firefox") >= 0) ||
-      //      (navigator.userAgent.search("MSIE") >= 0) ||
-      //      (navigator.userAgent.search("Edge") >= 0) ||
-      //      (navigator.userAgent.search("Safari") >= 0 && navigator.userAgent.search("Chrome") < 0)
-      //     ) {              
-      //     showMenu(docToHideAndShow);
-      //     if (c == 1) { // if user clicked on link to About section
-      //       scrollFlow(sectionAbout, viewportHeight);
-      //     } else if (c == 3) { // if user clicked on link to Portfolio section
-      //       scrollFlow(sectionPortfolio, viewportHeight);
-      //     }
-      //   } else {
-      //     showMenu(docToHideAndShow);
-      //   }
-      // }
+      if (activePageNum == 12 || isChrome || isOpera) { // if user clicked on link to Contact section
+        showMenu(docToHideAndShow);
+      } else {
+        if (isFirefox || isSafari || isIE || isEdge) {              
+          showMenu(docToHideAndShow);
+          if (activePageNum == 1) { // if user clicked on link to About section
+            scrollFlow(sectionAbout, viewportHeight);
+          } else if (activePageNum == 3) { // if user clicked on link to Portfolio section
+            scrollFlow(sectionPortfolio, viewportHeight);
+          }
+        } else {
+          showMenu(docToHideAndShow);
+        }
+      }
     });
 
     // Portfolio section animate
