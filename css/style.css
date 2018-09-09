@@ -572,7 +572,7 @@ header .col-7 h1 span:nth-of-type(5) { padding-left: 14rem; }
 
 .portfolio figure .layer:hover img { opacity: 1; }
 
-.portfolio figure .layer img { width: 25rem; opacity: 0; transition: opacity 1s ease-in-out; cursor: pointer; }
+.portfolio figure .layer img { width: 25.07rem; opacity: 0; transition: opacity 1s ease-in-out; cursor: pointer; }
 
 @media (max-height: 500px) and (orientation: landscape) { .portfolio figure .layer img { width: 20rem; } }
 
